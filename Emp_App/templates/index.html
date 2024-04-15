@@ -1,0 +1,2284 @@
+{% extends "base.html" %}
+{% block body %}
+{% load static %}
+{% comment %} <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>We360.ai | Award Winning Employee Monitoring Software</title>
+    <link rel="stylesheet" href="./assets/style.css" />
+    <script src="./assets/script.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <style>
+      .navbar-main-box {
+      
+        position: fixed !important;
+        background-color: white;
+        z-index: 999;
+        
+      }
+
+      .dropdown:hover > .dropdown-menu {
+        display: block;
+      }
+
+      /* Added CSS for hover effect */
+      .nav-item:hover .dropdown-menu {
+        display: block;
+        align-items: center;
+      }
+
+      .navbar-nav .nav-item .dropdown-menu {
+        margin-top: 0;
+      }
+      section footer .list-unstyled li a {
+        color: inherit; /* Inherits text color from parent */
+        text-decoration: none; /* Removes default underline */
+        cursor: pointer; /* Changes cursor to pointer */
+      }
+
+      section footer .list-unstyled li a:hover {
+        color: blue; /* Changes text color to blue on hover */
+      }
+
+      .accordion1 {
+        display: none;
+      }
+      .accordion-button:not(.collapsed) {
+        background-color: white !important;
+        border: 0px !important;
+      }
+      .accordion-button::after {
+        background-color: #ffb800;
+        font-weight: 900;
+        padding: 15px;
+        background-position-x: center;
+        background-position: center;
+        border-radius: 50%;
+      }
+
+       @media only screen and (min-width: 1024px) {
+          .nav-tag-section {
+          padding-inline: 100px !important;
+        }
+        }
+      @media only screen and (max-width: 768px) {
+        .hide-content-for-responsive {
+          display: none; /* Hide red div at 320px */
+        }
+        .client-section-main-div{
+          display: none;
+        }
+        .build-teams{
+          margin-top: 1000px;
+        }
+        .demo123{
+          display: none;
+        }
+        .navbar-collapse-for-mobile{
+          background-color: white; 
+          height: 200px;
+          width: 100%;
+        }
+       
+        .right-side-nav-content{
+          display: none !important;
+          /* background-color: red; */
+
+        }
+        .build-teams{
+          margin-top: 100px;
+        }
+      
+        .accordion {
+          display: block; /* Show accordion at 320px */
+        }
+      }
+      .hover-effect:hover {
+        background-color: #211f54;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+    </style>
+
+    <style>
+      body {
+        font-family: sans-serif; /* Apply Poppins font to the body */
+      }
+      html,
+      body {
+        overflow-x: hidden !important;
+      }
+
+      .main-content-2 {
+        padding: 80px 20px;
+      }
+      .heading-25 {
+        color: #ffb800;
+        letter-spacing: 1.2px;
+        text-transform: uppercase;
+        padding-left: 0;
+        padding-right: 0;
+        font-size: 0.85rem;
+        font-weight: 500;
+        line-height: 1.4;
+        text-align: center;
+        padding-top: 55px;
+      }
+      .heading-27 {
+        text-align: center;
+        margin-bottom: 26px;
+        font-size: 2.8em;
+        line-height: 120%;
+        font-weight: 700;
+      }
+      .card-styling-1 {
+        border: 1px solid var(--stroke);
+        border-radius: 15px;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 32px;
+        display: flex;
+      }
+      .fluid-style-1 {
+        height: auto;
+      }
+      .down-town {
+        width: 40%;
+        padding: 30px;
+        position: absolute;
+        right: 0%;
+        top: 24%;
+        border-left-width: 4px;
+        border-left-color: #7b61ff;
+      }
+      #pills-tab {
+        background-color: #f6f5ff !important;
+        width: 80%;
+        justify-content: space-around;
+        border-radius: 20px !important;
+        margin-top: 50px !important;
+      }
+
+      .amazing-feature-left-div {
+        margin-top: 100px !important;
+      }
+
+      .for-head {
+        font-size: 2em;
+        font-weight: 700;
+        line-height: 120%;
+      }
+      .causal-card:hover .card {
+        box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+      }
+      .heading-h11 {
+        color: #1d115a;
+        font-size: 3.4em;
+        font-weight: 700;
+      }
+
+      .btn {
+        position: relative;
+        border: none;
+      }
+
+      .btn:hover {
+        border: 2px solid #ffcf70;
+      }
+
+      .arrow-icon {
+        background-color: #ffcf70;
+        padding: 18px;
+        border-radius: 27px;
+        position: relative;
+        left: 16px;
+      }
+
+      .arrow-icon::before {
+        content: "";
+        display: inline-block;
+        width: 0;
+        height: 0;
+        border-top: 10px solid transparent;
+        border-bottom: 10px solid transparent;
+        border-left: 10px solid white; /* Adjust color as needed */
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: -10px; /* Adjust distance from button text */
+        transition: right 0.3s; /* Only transition the right position */
+      }
+
+      .btn:hover .arrow-icon::before {
+        right: 0px; /* Move the arrow to the right */
+      }
+      .owl-carousel .owl-item img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+      @media (max-width: 768px) {
+        #knock-height {
+          height: 200vh !important;
+        }
+        .some-class {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+        .down-town {
+          width: 88% !important;
+          padding: 20px !important;
+          position: absolute !important;
+          right: 6% !important;
+          top: 58% !important;
+        }
+        .los-angles {
+          height: 110vh !important;
+        }
+        .font-stylish {
+          font-size: 15px !important;
+        }
+
+        #jini {
+          right: 0 !important;
+        }
+      }
+      @media (max-width: 1024px) {
+        #knock-height {
+          height: 150vh !important;
+        }
+        .some-class {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+        .card-text-here {
+          padding: 16px !important;
+        }
+        .down-town {
+          width: 40%;
+          padding: 30px;
+          position: absolute;
+          right: -3%;
+          top: 14%;
+        }
+        .carousel-control-next-icon {
+          position: absolute !important;
+          right: 40% !important;
+        }
+        .carousel-control-prev-icon {
+          position: absolute !important;
+          left: 50% !important;
+        }
+      }
+      @media (max-width: 426px) {
+        #knock-height {
+          height: 220vh !important;
+        }
+        .responsive-img {
+          height: 300px;
+          width: 297px;
+        }
+        .card-styling-1 {
+          margin-top: 10px;
+          margin-bottom: 10px;
+        }
+        #arrange-model {
+          height: 385px !important;
+          width: 630px !important;
+        }
+        .los-angles {
+          height: 130vh !important;
+        }
+        .down-town {
+          width: 100% !important;
+          padding: 8px !important;
+          position: absolute !important;
+          right: 0% !important;
+          top: 70% !important;
+        }
+      }
+      @media (max-width: 320px) {
+        #knock-height {
+          height: 245vh !important;
+        }
+        .responsive-img {
+          padding: 18px 1px !important ;
+        }
+        .los-angles {
+          height: 150vh !important;
+        }
+        #ijij {
+          height: 30px !important;
+        }
+        #uiiii {
+          font-size: 10px !important;
+        }
+        .down-town {
+          top: 60% !important;
+        }
+      }
+      @media (max-width: 576px) {
+        .card-text.font-stylish {
+          font-size: 12px !important; /* Adjust font size as needed */
+          line-height: 1.5; /* Adjust line height as needed */
+        }
+        #ddd {
+          font-size: 14px !important;
+        }
+        #uiiii {
+          font-size: 12px !important;
+        }
+        #ijij {
+          height: 35px !important;
+        }
+        .los-angles {
+          height: 118vh !important;
+        }
+      }
+
+      .heading-500 {
+        color: #ffb800;
+        letter-spacing: 1.2px;
+        text-transform: uppercase;
+        padding-left: 0;
+        padding-right: 0;
+        font-size: 0.85rem;
+        font-weight: 500;
+        line-height: 1.4;
+        text-transform: lowercase;
+        text-align: center;
+      }
+
+      .heading-600 {
+        color: #1d115a;
+        font-size: 40px;
+        font-weight: 800;
+        text-align: center;
+      }
+      #knock-height {
+        height: 135vh;
+      }
+
+      .carousel-control-next-icon {
+        width: 45px;
+        height: 45px;
+        background-color: #7b61ff;
+        border-radius: 16px;
+        font-size: 17px;
+        transition: all 0.2s;
+        position: absolute;
+        right: 60%;
+      }
+      .carousel-control-prev-icon {
+        width: 45px;
+        height: 45px;
+        background-color: #7b61ff;
+        border-radius: 16px;
+        font-size: 17px;
+        transition: all 0.2s;
+        position: absolute;
+        left: 118%;
+      }
+      @media (max-width: 376px) {
+        .down-town {
+          top: 66% !important;
+          position: absolute !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar Start  -->
+    <section class="container-fluid">
+      <nav
+        class="navbar navbar-expand-lg b container-fluid nav-tag-section navbar-main-box "
+       >
+        <div class="container-fluid">
+          <a class="navbar-brand" href="./index.html"
+            ><img
+              src="https://assets-global.website-files.com/621f6320a4c8a1030a6a2d65/6446484b74010d971f17c01b_we360.ai%20logo%20128px%20main.webp"
+              alt=""
+          /></a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarScroll"
+            aria-controls="navbarScroll"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarScroll">
+            <ul
+              class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll navbar-collapse-for-mobile"
+              style="--bs-scroll-height: 400px; "
+            >
+              <li class="nav-item dropdown ms-4">
+                <a
+                  class="nav-link dropdown-toggle navbar-title-header"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Solution
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="./Pages/Workforce_analytics.html"
+                      >Workforce Analytics</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="./Pages/EmployeeMonitering.html"
+                      >Employee Monitoring</a
+                    >
+                  </li>
+                  <!-- <li><hr class="dropdown-divider" /></li> -->
+                  <li>
+                    <a class="dropdown-item" href="./Pages/FieldTracking.html"
+                      >Field Tracking Software</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">See All Features</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="nav-item dropdown ms-4">
+                <a
+                  class="nav-link dropdown-toggle navbar-title-header"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Industries
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">IT</a></li>
+                  <li><a class="dropdown-item" href="#">BPO</a></li>
+                  <li><a class="dropdown-item" href="#">Edtech</a></li>
+                  <li>
+                    <a class="dropdown-item" href="#"
+                      >Digital Marketing Agency</a
+                    >
+                  </li>
+                  <li><a class="dropdown-item" href="#">HR & Staffing</a></li>
+                  <!-- <li><hr class="dropdown-divider" /></li> -->
+                </ul>
+              </li>
+
+              <li class="nav-item dropdown ms-4">
+                <a
+                  class="nav-link dropdown-toggle navbar-title-header"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  About Us
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Our Company</a></li>
+                  <li><a class="dropdown-item" href="#">Meet the Team</a></li>
+                  <li>
+                    <a class="dropdown-item" href="./Pages/contact.html"
+                      >Contact Us</a
+                    >
+                  </li>
+                </ul>
+              </li>
+
+              <li class="nav-item ms-4">
+                <a
+                  class="nav-link navbar-title-header"
+                  href="./Pages/Pricing.html"
+                  >Pricing</a
+                >
+              </li>
+            </ul>
+            <ul
+              class="d-flex list-unstyled right-side-nav-content text-decoration-none"
+            >
+              <li class="py-2">
+                <a class="text-decoration-none text-black" href="">122121212</a>
+              </li>
+              <li class="py-2">
+                <a class="text-decoration-none text-black" href="./Pages/login.html">Login</a>
+              </li>
+              <button class="btn btn-warning start-free-trail-btn">
+                Start Free Trail
+              </button>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </section>
+    <!-- Navbar Start  --> {% endcomment %}
+
+    <!-- Hero Section -->
+    <section>
+      <div class="hero-section-main-div"  style ="background-color:#0E2679" >
+        <div class="container col-xxl-8 py-5">
+          <div class="row flex-lg-row-reverse align-items-center g-5 py-5 background-black">
+            <div class="col-10 col-sm-8 col-lg-6">
+              {% for data in dc_key %}
+              <img
+                src="{{data.image.url}}"
+                class="d-block mx-lg-auto img-fluid"
+                alt="Bootstrap Themes"
+                width="700"
+                height="500"
+                loading="lazy"
+              />
+            </div>
+            <div class="col-lg-6 hero-section-left-side-div">
+              <h1 class="fw-bold lh-1 mb-3 text-white">
+                {{data.title|safe}}
+              </h1>
+              <p class="lead text-white">
+                {{data.desc|safe}}
+              </p>
+            <div>
+              {% endfor %}
+              <form action="#" method = "POST">
+                {% csrf_token %}
+                <div class="row">
+                  
+                  <div class="col-lg-6">
+                   
+                    <input
+                      class="form-control form-control-lg input-boxx"
+                      type="text" placeholder= "Firstname" id = "firstname" name = "firstname" 
+                      aria-label=".form-control-lg example"
+                    />
+                  </div>
+
+                  <div class="col-lg-6">
+                    
+                    <input
+                      class="form-control form-control-lg input-boxx"
+                      type="text" placeholder= "Lastname" id = "lastname" name = "lastname" 
+                      aria-label=".form-control-lg example"
+                    />
+                  </div>
+
+                  <div class="col-lg-12 mt-3">
+                   
+                    <input
+                      class="form-control form-control-lg input-boxx"
+                      type="email" placeholder= "Email" id = "mail" name = "mail" 
+                      aria-label=".form-control-lg example"
+                    />
+                  </div>
+                  <div class="col-lg-12 mt-3">
+
+                    <input
+                      class="form-control form-control-lg input-boxx"
+                      type="number" placeholder= "Phone" id = "phone" name = "phone" 
+                      aria-label=".form-control-lg example"
+                    />
+                  </div>
+
+                  <div>
+                    <button type='submit' class="btn mt-3 btn-warning px-5 py-2 fw-bold">
+                      Schedule a Demo
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </form> 
+            </div>
+          </div>
+        </div>
+
+        <div class="container">
+          <p class="text-white text-center">Featured In</p>
+          <div
+            class="row justify-content-center align-items-center w-75 m-auto"
+          >
+          {% for data in fi_key %}
+            <div class="col mb-3" >
+              <img
+                class="img-fluid"
+                src="{{data.image.url}}"
+                alt=""
+              />
+            </div>
+          {% endfor %}
+            {% comment %} <div class="col mb-3">
+              <img
+                class="img-fluid ms-3"
+                width="50px"
+                src="./assets/images/DNA.png"
+                alt=""
+              />
+            </div>
+            <div class="col mb-3">
+              <img
+                class="img-fluid"
+                width="80px"
+                src="./assets/images/mid-day.png"
+                alt=""
+              />
+            </div>
+            <div class="col mb-3">
+              <img
+                class="img-fluid"
+                width="50px"
+                src="./assets/images/DH-PR.png"
+                alt=""
+              />
+            </div>
+            <div class="col mb-3">
+              <img
+                class="img-fluid"
+                width="50px"
+                src="./assets/images/mint.png"
+                alt=""
+              />
+            </div>
+            <div class="col mb-3">
+              <img
+                class="img-fluid"
+                src="./assets/images/ThePrint.png"
+                alt=""
+              />
+            </div>
+            <div class="col mb-3">
+              <img
+                class="img-fluid"
+                src="./assets/images/the-India-saga.png"
+                alt=""
+              />
+            </div> {% endcomment %}
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Hero Section -->
+
+    <!-- Clients Info Section -->
+    <section class="mt-5">
+      <div class="client-section-main-div">
+        <div class="d-flex justify-content-center text-center">
+          <h2>Serving 2700+ clients across 19 countries with 47,000+ users</h2>
+        </div>
+        <div>
+          <div class="row d-flex m-auto container mt-4">
+            <div class="col">
+              <img src="./assets/images/euro exim bank - client logo.png" alt="" />
+            </div>
+            {% comment %} <div class="col">
+              <img src="./assets/images/patanjali research - client logo.png" alt="" />
+            </div>
+            <div class="col">
+              <img src="./assets/images/navitas - client logo.png" alt="" />
+            </div>
+            <div class="col">
+              <img src="./assets/images/niva bupa - client logo.png" alt="" />
+            </div>
+            <div class="col">
+              <img src="./assets/images/dr batra - client logo.png" alt="" />
+            </div>
+            <div class="col">
+              <img src="./assets/images/kft - client logo.png" alt="" />
+            </div>
+            <div class="col">
+              <img src="./assets/images/shapoorji pallonji - client logo.png" alt="" />
+            </div> {% endcomment %}
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Clients Info Section -->
+
+    <!-- Amazing Feature Section -->
+    <section class="demo123">
+      <div>
+        <div class="d-flex justify-content-center text-center fw-bold mt-5">
+          <h1 class="fw-bold" style="font-size: 50px">
+            Amazing features to make <br />
+            your work easier
+          </h1>
+        </div>
+
+        <div class="d-flex justify-content-center">
+          <ul class="nav nav-pills mb-3 py-2" id="pills-tab" role="tablist">
+            <li class="nav-item kya" role="presentation">
+              <button
+                class="nav-link py-3 px-4 active text-black fw-bold border-0"
+                id="pills-home-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#pills-home"
+                type="button"
+                role="tab"
+                aria-controls="pills-home"
+                aria-selected="true"
+              >
+                Productivity
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link py-3 px-4 text-black fw-bold border-0"
+                id="pills-profile-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#pills-profile"
+                type="button"
+                role="tab"
+                aria-controls="pills-profile"
+                aria-selected="false"
+              >
+                Screenshots
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link py-3 px-4 text-black fw-bold border-0"
+                id="pills-contact-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#pills-contact"
+                type="button"
+                role="tab"
+                aria-controls="pills-contact"
+                aria-selected="false"
+              >
+                Application Usage
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link py-3 px-4 text-black fw-bold border-0"
+                id="pills-reports-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#pills-reports"
+                type="button"
+                role="tab"
+                aria-controls="pills-reports"
+                aria-selected="false"
+              >
+                Reports
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link py-3 px-4 text-black fw-bold border-0"
+                id="pills-mobile-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#pills-mobile"
+                type="button"
+                role="tab"
+                aria-controls="pills-mobile"
+                aria-selected="false"
+              >
+                Mobile App
+              </button>
+            </li>
+          </ul>
+        </div>
+
+        <div
+          class="tab-content d-flex justify-content-center feature-content-div"
+          id="pills-tabContent"
+        >
+          <div
+            class="tab-pane fade show active"
+            id="pills-home"
+            role="tabpanel"
+            aria-labelledby="pills-home-tab"
+            tabindex="0"
+          >
+            <div class="container-fluid col-xxl-8 px-4 w-100">
+              <div class="row flex-lg-row-reverse align-items-center g-5">
+                <div class="col-10 col-sm-8 col-lg-6">
+                  <img
+                    class="d-block mx-lg-auto img-fluid"
+                    src="https://assets-global.website-files.com/621f6320a4c8a1030a6a2d65/647dc6e7284342c55bc68030_productivity%20summary.webp"
+                    alt="Bootstrap Themes"
+                    width="700"
+                    height="500"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="col-lg-6 amazing-feature-left-div">
+                  <h1 class="display-6 fw-bold lh-1">
+                    Track Real-Time Productivity
+                  </h1>
+                  <p class="lead mt-4">
+                    Know what your employees are up to anytime. We360.ai’s
+                    software gives you just that - our hierarchy-based dashboard
+                    empowers managers, human resource departments, and admin
+                    users to analyze employee performance quickly.
+                  </p>
+                  <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                    <a href="">Learn More...</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="tab-pane fade"
+            id="pills-profile"
+            role="tabpanel"
+            aria-labelledby="pills-profile-tab"
+            tabindex="0"
+          >
+            <div class="container-fluid col-xxl-8 px-4 w-100">
+              <div class="row flex-lg-row-reverse align-items-center g-5">
+                <div class="col-10 col-sm-8 col-lg-6">
+                  <img
+                    class="d-block mx-lg-auto img-fluid"
+                    src="https://assets-global.website-files.com/621f6320a4c8a1030a6a2d65/64c8912a75827a7c7fa5618e_screenshots%2002.webp"
+                    alt="Bootstrap Themes"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="col-lg-6 amazing-feature-left-div">
+                  <h1 class="display-6 fw-bold lh-1">Get Screenshots</h1>
+                  <p class="lead mt-4">
+                    Understand how the work gets done with screenshot capture.
+                    We360.ai’s fixed-interval screenshot feature lets you find
+                    where the team is engaged during work hours. Use this
+                    feature for those roles or employees whom you wish to
+                    utilize in some other way.
+                  </p>
+                  <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                    <a href="">Learn More...</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="tab-pane fade"
+            id="pills-contact"
+            role="tabpanel"
+            aria-labelledby="pills-contact-tab"
+            tabindex="0"
+          >
+            <div class="container-fluid col-xxl-8 px-4 w-100">
+              <div class="row flex-lg-row-reverse align-items-center g-5">
+                <div class="col-10 col-sm-8 col-lg-6">
+                  <img
+                    class="d-block mx-lg-auto img-fluid"
+                    src="https://assets-global.website-files.com/621f6320a4c8a1030a6a2d65/647dc6e7d7799125e9e56962_Application%20detail.webp"
+                    alt="Bootstrap Themes"
+                    width="700"
+                    height="500"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="col-lg-6 amazing-feature-left-div">
+                  <h1 class="display-6 fw-bold lh-1">App Utility</h1>
+                  <p class="lead mt-4">
+                    Differentiate between work and non-work apps used by your
+                    employees. We360.ai tracks app frequency and duration to
+                    gauge productivity levels, helping you identify productive
+                    workers and those in need of supervision.
+                  </p>
+                  <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                    <a href="">Learn More...</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="tab-pane fade"
+            id="pills-reports"
+            role="tabpanel"
+            aria-labelledby="pills-reports-tab"
+            tabindex="0"
+          >
+            <div class="container-fluid col-xxl-8 px-4 w-100">
+              <div class="row flex-lg-row-reverse align-items-center g-5">
+                <div class="col-10 col-sm-8 col-lg-6">
+                  <img
+                    class="d-block mx-lg-auto img-fluid"
+                    src="https://assets-global.website-files.com/621f6320a4c8a1030a6a2d65/647ef71e7a36fb101cc8ce37_Reports-p-1080.webp"
+                    alt="Bootstrap Themes"
+                    width="700"
+                    height="500"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="col-lg-6 amazing-feature-left-div">
+                  <h1 class="display-6 fw-bold lh-1">
+                    Simple Insightful Reports
+                  </h1>
+                  <p class="lead mt-4">
+                    Get comprehensive employee work reports with We360.ai.
+                    Monitor attendance, productivity, and project progress with
+                    ease using our robust reporting system, which allows for
+                    quick and detailed analysis.
+                  </p>
+                  <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                    <a href="">Learn More...</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="tab-pane fade"
+            id="pills-mobile"
+            role="tabpanel"
+            aria-labelledby="pills-mobile-tab"
+            tabindex="0"
+          >
+            <div class="container-fluid col-xxl-8 px-4 w-100">
+              <div class="row flex-lg-row-reverse align-items-center g-5">
+                <div class="col-10 col-sm-8 col-lg-6">
+                  <img
+                    class="d-block mx-lg-auto img-fluid"
+                    src="https://assets-global.website-files.com/621f6320a4c8a1030a6a2d65/647ef216162c5306c7b8719e_In-Mobile0.webp"
+                    alt="Bootstrap Themes"
+                    width="700"
+                    height="500"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="col-lg-6 amazing-feature-left-div">
+                  <h1 class="display-6 fw-bold lh-1">
+                    Remote Status - Get Untimely Access
+                  </h1>
+                  <p class="lead mt-4">
+                    We360.ai mobile application enables your managers and admin
+                    users to have remote access on both Android and iOS
+                    platforms to get a birds-eye view of all employees' daily
+                    performance and task completion. We360.ai Employee
+                    monitoring app provides real-time employee updates and is
+                    perfect for organizations of all sizes.
+                  </p>
+                  <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                    <a href="">Learn More...</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Amazing Feature Section-->
+
+    <!-- Make every minute Section -->
+    <section>
+      <div class="make-every-min-main-box mt-lg-5" style = "background-color:aliceblue">
+        <div class="container col-xl-10 col-xxl-8 px-4 py-5">
+          <div class="row align-items-center g-lg-5 py-5">
+            <div class="col-lg-7 text-center text-lg-start">
+              {% for data in tes_key %}
+              <h1 class="display-5 fw-bold lh-1 mb-3">
+                {{data.title|safe}}
+              </h1>
+              <p class="col-lg-10 fs-4">
+                {{data.desc|safe}}
+              </p>
+              {% endfor %}
+            </div>
+            <div class="col-md-10 mx-auto col-lg-5">
+              {% for data in tesi_key %}
+              <div class="card flex-row border-0" style="background-color: aliceblue">
+                <div>
+                  <div class="card p-3 border-0 rounded">
+                    <img
+                      class="card-img-left example-card-img-responsive"
+                      src="{{data.image.url}}"
+                      width="100"
+                    />
+                  </div>
+                </div>
+                <div class="card-body ms-4">
+                  <h1 class="h3 fw-bold">{{data.title|safe}}</h1>
+                  <p class="card-text">
+                    {{data.desc|safe}}
+                  </p>
+                </div>
+              </div>
+              {% endfor %}
+
+              {% comment %} <div
+                class="card flex-row border-0 mt-5"
+                style="background-color: aliceblue"
+              >
+                <div>
+                  <div class="card p-3 border-0 rounded">
+                    <img
+                      class="card-img-left example-card-img-responsive"
+                      src="https://assets-global.website-files.com/621f6320a4c8a1030a6a2d65/623d811612b1c63f6d8712c5_ht_icon-13.svg"
+                      width="100"
+                    />
+                  </div>
+                </div>
+                <div class="card-body ms-4">
+                  <h1 class="h3 fw-bold">Setup Profile</h1>
+                  <p class="card-text">
+                    Create a free account and fill in the information
+                  </p>
+                </div>
+              </div>
+
+              <div class="card flex-row border-0 mt-5" style="background-color: aliceblue">
+                <div>
+                  <div class="card p-3 border-0 rounded">
+                    <img
+                      class="card-img-left example-card-img-responsive"
+                      src="https://assets-global.website-files.com/621f6320a4c8a1030a6a2d65/623d8116ca560574979a931e_ht_icon-14.svg"
+                      width="100"
+                    />
+                  </div>
+                </div>
+                <div class="card-body ms-4">
+                  <h1 class="h3 fw-bold">Get Analytics</h1>
+                  <p class="card-text">
+                    Create a free account and fill in the information
+                  </p>
+                </div>
+              </div> {% endcomment %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Make every minute Section -->
+
+    <!-- Build for the Modern Teams Section -->
+
+    <section class="build-teams">
+      <!-- style="background-color: #0e082e;" -->
+      <div
+        style="
+          background-color: #0e082e;
+          padding-top: 60px;
+          padding-bottom: 60px;
+        "
+      >
+        <div class="d-flex justify-content-center text-center fw-bold mt-5">
+          <div>
+            <h1 class="fw-bold text-white" style="font-size: 50px">
+              Build for the Modern Teams
+            </h1>
+
+            <p class="fw-bold text-secondary" style="font-size: 30px">
+              We360.ai has all the features you need
+            </p>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="row">
+            <div
+              class="col-md d-flex flex-column justify-content-center align-items-center rounded-2 p-5 hover-effect"
+            >
+              <div class="text-center">
+                <span class="border p-3 rounded-5 bg-dark">
+                  <img
+                    src="https://assets-global.website-files.com/621f6320a4c8a1030a6a2d65/64c77fe10215b63fbca75193_attendance%20icon%20v2.svg"
+                    alt=""
+                /></span>
+                <p class="text-white fw-bold mt-3" style="font-size: 17px">
+                  Attendance
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="col-md d-flex flex-column justify-content-center align-items-center rounded-2 p-5 hover-effect"
+            >
+              <div class="text-center">
+                <span class="border p-3 rounded-5 bg-dark">
+                  <img
+                    src="https://assets-global.website-files.com/621f6320a4c8a1030a6a2d65/64c77fe10215b63fbca75193_attendance%20icon%20v2.svg"
+                    alt=""
+                /></span>
+                <p class="text-white fw-bold mt-3" style="font-size: 17px">
+                  Attendance
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="col-md d-flex flex-column justify-content-center align-items-center rounded-2 p-5 hover-effect"
+            >
+              <div class="text-center">
+                <span class="border p-3 rounded-5 bg-dark">
+                  <img
+                    src="https://assets-global.website-files.com/621f6320a4c8a1030a6a2d65/64c77fe10215b63fbca75193_attendance%20icon%20v2.svg"
+                    alt=""
+                /></span>
+                <p class="text-white fw-bold mt-3" style="font-size: 17px">
+                  Attendance
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="col-md d-flex flex-column justify-content-center align-items-center rounded-2 p-5 hover-effect"
+            >
+              <div class="text-center">
+                <span class="border p-3 rounded-5 bg-dark">
+                  <img
+                    src="https://assets-global.website-files.com/621f6320a4c8a1030a6a2d65/64c77fe10215b63fbca75193_attendance%20icon%20v2.svg"
+                    alt=""
+                /></span>
+                <p class="text-white fw-bold mt-3" style="font-size: 17px">
+                  Attendance
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="row">
+            <div
+              class="col-md d-flex flex-column justify-content-center align-items-center rounded-2 p-5 hover-effect"
+            >
+              <div class="text-center">
+                <span class="border p-3 rounded-5 bg-dark">
+                  <img
+                    src="https://assets-global.website-files.com/621f6320a4c8a1030a6a2d65/64c77fe10215b63fbca75193_attendance%20icon%20v2.svg"
+                    alt=""
+                /></span>
+                <p class="text-white fw-bold mt-3" style="font-size: 17px">
+                  Attendance
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="col-md d-flex flex-column justify-content-center align-items-center rounded-2 p-5 hover-effect"
+            >
+              <div class="text-center">
+                <span class="border p-3 rounded-5 bg-dark">
+                  <img
+                    src="https://assets-global.website-files.com/621f6320a4c8a1030a6a2d65/64c77fe10215b63fbca75193_attendance%20icon%20v2.svg"
+                    alt=""
+                /></span>
+                <p class="text-white fw-bold mt-3" style="font-size: 17px">
+                  Attendance
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="col-md d-flex flex-column justify-content-center align-items-center rounded-2 p-5 hover-effect"
+            >
+              <div class="text-center">
+                <span class="border p-3 rounded-5 bg-dark">
+                  <img
+                    src="https://assets-global.website-files.com/621f6320a4c8a1030a6a2d65/64c77fe10215b63fbca75193_attendance%20icon%20v2.svg"
+                    alt=""
+                /></span>
+                <p class="text-white fw-bold mt-3" style="font-size: 17px">
+                  Attendance
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="col-md d-flex flex-column justify-content-center align-items-center rounded-2 p-5 hover-effect"
+            >
+              <div class="text-center">
+                <span class="border p-3 rounded-5 bg-dark">
+                  <img
+                    src="https://assets-global.website-files.com/621f6320a4c8a1030a6a2d65/64c77fe10215b63fbca75193_attendance%20icon%20v2.svg"
+                    alt=""
+                /></span>
+                <p class="text-white fw-bold mt-3" style="font-size: 17px">
+                  Attendance
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="row">
+            <div
+              class="col-md d-flex flex-column justify-content-center align-items-center rounded-2 p-5 hover-effect"
+            >
+              <div class="text-center">
+                <span class="border p-3 rounded-5 bg-dark">
+                  <img
+                    src="https://assets-global.website-files.com/621f6320a4c8a1030a6a2d65/64c77fe10215b63fbca75193_attendance%20icon%20v2.svg"
+                    alt=""
+                /></span>
+                <p class="text-white fw-bold mt-3" style="font-size: 17px">
+                  Attendance
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="col-md d-flex flex-column justify-content-center align-items-center rounded-2 p-5 hover-effect"
+            >
+              <div class="text-center">
+                <span class="border p-3 rounded-5 bg-dark">
+                  <img
+                    src="https://assets-global.website-files.com/621f6320a4c8a1030a6a2d65/64c77fe10215b63fbca75193_attendance%20icon%20v2.svg"
+                    alt=""
+                /></span>
+                <p class="text-white fw-bold mt-3" style="font-size: 17px">
+                  Attendance
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="col-md d-flex flex-column justify-content-center align-items-center rounded-2 p-5 hover-effect"
+            >
+              <div class="text-center">
+                <span class="border p-3 rounded-5 bg-dark">
+                  <img
+                    src="https://assets-global.website-files.com/621f6320a4c8a1030a6a2d65/64c77fe10215b63fbca75193_attendance%20icon%20v2.svg"
+                    alt=""
+                /></span>
+                <p class="text-white fw-bold mt-3" style="font-size: 17px">
+                  Attendance
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="col-md d-flex flex-column justify-content-center align-items-center rounded-2 p-5 hover-effect"
+            >
+              <div class="text-center">
+                <span class="border p-3 rounded-5 bg-dark">
+                  <img
+                    src="https://assets-global.website-files.com/621f6320a4c8a1030a6a2d65/64c77fe10215b63fbca75193_attendance%20icon%20v2.svg"
+                    alt=""
+                /></span>
+                <p class="text-white fw-bold mt-3" style="font-size: 17px">
+                  Attendance
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Build for the Modern Teams Section -->
+
+    <!-- Plans for Everyone Section -->
+    <section>
+      <div
+        class=""
+        style="
+          background-color: #fbfaff;
+          padding-top: 60px;
+          padding-bottom: 60px;
+        "
+      >
+        <div class="d-flex justify-content-center text-center fw-bold mt-5">
+          <div>
+            <p class="fw-bold text-secondary" style="font-size: 20px">
+              PRICING PLAN
+            </p>
+            <h1 class="fw-bold text-black" style="font-size: 50px">
+              Plans for Everyone
+            </h1>
+          </div>
+        </div>
+
+        <div
+          class="container bg-white rounded-4"
+          style="width: 65%; border: 2px solid blue; align-items: center"
+        >
+          <div class="row justify-content-center">
+            <div
+              class="card border-0 col-md-6 mt-5 mb-5"
+              style="max-width: 440px"
+            >
+              <div class="row g-0">
+                <div class="col-md-12 text-center text-center">
+                  <!-- <div class="px-2" style="border: 1px solid gray; border-radius: 50px; width:auto;display: flex; justify-content: center; background-color: #fbfaff; ">
+                      <h6 style="font-weight: bold; color: #7b61ff;margin-top: 15px;">GET THE FREE TRIAL NOW</h6>
+                      <button class="btn">GET THE FREE TRIAL NOW</button>
+                    </div> -->
+
+                  <button
+                    type="button"
+                    class="btn fw-bold rounded-5"
+                    style="
+                      background-color: #fbfaff;
+                      border: 1px solid #dad3ff;
+                      color: #7b61ff;
+                    "
+                  >
+                    GET THE FREE TRIAL NOW
+                  </button>
+
+                  <p class="mt-5">Starting From</p>
+                  <h1 class="fw-bold mt-5">₹299</h1>
+                  <span class="mb-5">/seat/month</span>
+                  <br />
+                  <button type="button" class="btn btn-primary w-50 mt-5">
+                    Schedule a Demo
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="card mb-3 col-md-6 mt-5 mb-5"
+              style="max-width: 440px; height: 25rem; background-color: #fbfaff"
+            >
+              <div class="row g-0">
+                <div class="col-md-8">
+                  <div class="card-body mt-5">
+                    <h5 class="card-title text-uppercase">Benefits:</h5>
+                    <p class="card-text mt-5">
+                      <i class="fa-regular fa-square-check text-primary"></i>
+                      Personalized Onboarding
+                    </p>
+                    <hr />
+                    <p class="card-text">
+                      <i class="fa-regular fa-square-check text-primary"></i>
+                      Personalized Onboarding
+                    </p>
+                    <hr />
+                    <p class="card-text">
+                      <i class="fa-regular fa-square-check text-primary"></i>
+                      Personalized Onboarding
+                    </p>
+                    <hr />
+                    <!-- <p class="card-text">
+                      <small class="text-body-secondary"
+                        >Last updated 3 mins ago</small
+                      >
+                    </p> -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Plans for Everyone Section -->
+
+    <!-- Slider Section -->
+    <section>
+      <div
+        class="container-fluid los-angles"
+        style="background-color: #0e082e; padding: 70px 0px"
+      >
+        <div class="row p-2">
+          {% for data in testimonial_key %}
+          <h2
+            style="
+              color: #ffb800;
+              letter-spacing: 1.2px;
+              text-transform: uppercase;
+              padding-left: 0;
+              padding-right: 0;
+              font-size: 0.85rem;
+              font-weight: 500;
+              line-height: 1.4;
+              text-align: center;
+            "
+          >
+            {{data.title|safe}}
+          </h2>
+          <h2
+            style="
+              color: #fff;
+              font-size: 2.8em;
+              font-weight: 700;
+              text-align: center;
+              padding: 15px 0px;
+            "
+          >
+            {{data.desc_1|safe}}
+          </h2>
+          <p
+            style="
+              color: rgba(255, 255, 255, 0.8);
+              text-align: center;
+              padding: 15px 0px;
+            "
+          >
+          {{data.desc_2|safe}}
+          </p>
+          {% endfor %}
+          <!-- Slide 1 -->
+
+          <div id="carouselExample" class="carousel slide">
+            <div class="carousel-inner">
+              <div class="carousel-item active" style="z-index: 1">
+                <div class="row">
+                  <div class="col-lg-12">
+                    <div
+                      class="card"
+                      style="
+                        background-color: #0e082e;
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: center;
+                        right: 10%;
+                      "
+                      id="jini"
+                    >
+                      <div>
+                        <img
+                          src="https://assets-global.website-files.com/621f6320a4c8a1030a6a2d65/637df72d6568e47a685155ae_Will%20We360.ai%20Employee%20Tracking%20App%20Suit%20My%20Business%20Needs.webp"
+                          class="img-fluid"
+                          srcset=""
+                          style="
+                            height: 387px;
+                            width: 630px;
+                            background-position: top;
+                          "
+                          id="arrange-model"
+                        />
+                      </div>
+                      
+                      <div>
+                        
+                        <div class="card down-town">
+                          {% for data in testimonial_slider %}
+                          <div class="card-text font-stylish" style="font-size: 18px; font-weight: 600">
+                            {% comment %} "<span style="color: #7b61ff"
+                              >More than 100 members</span
+                            >
+                            of my team work from remote places post-covid.
+                            Without We360.ai, keeping track of their time and
+                            <span style="color: #7b61ff"
+                              >attendance would be nearly </span
+                            >impossible." {% endcomment %}
+                            {{data.desc|safe}}
+                          </div>
+                          <div style="display: flex; gap: 4%; padding: 10px 0px">
+                            <div>
+                              <img
+                                src="https://assets-global.website-files.com/621f6320a4c8a1030a6a2d65/63abe1255bfef421d293d486_chaticon.svg"
+                                alt=""
+                                srcset=""
+                                id="ijij"
+                              />
+                            </div>
+                            <div id="uiiii">
+                              {{data.name|safe}}
+                            </div>
+                          </div>
+                          {% endfor %}
+                        </div>
+                        
+                      </div>
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="item">
+                  <div class="row">
+                    <div class="col-lg-12">
+                      <div
+                        class="card"
+                        style="
+                          background-color: #0e082e;
+                          display: flex;
+                          flex-direction: row;
+                          justify-content: center;
+                          right: 10%;
+                        "
+                        id="jini"
+                      >
+                        <div>
+                          <img
+                            src="https://assets-global.website-files.com/621f6320a4c8a1030a6a2d65/637df72d6568e47a685155ae_Will%20We360.ai%20Employee%20Tracking%20App%20Suit%20My%20Business%20Needs.webp"
+                            class="img-fluid"
+                            srcset=""
+                            style="
+                              height: 387px;
+                              width: 630px;
+                              background-position: top;
+                            "
+                            id="arrange-model"
+                          />
+                        </div>
+                        <div>
+                          <div class="card down-town">
+                            <div
+                              class="card-text font-stylish"
+                              style="font-size: 18px; font-weight: 600"
+                            >
+                              "
+                              <span style="color: #7b61ff"
+                                >Our productivity has grown by at least
+                                50%</span
+                              >
+                              after deploying We360.ai. We almost increased the
+                              frequency of our appointment bookings in less than
+                              2 months, and recovered all costs within 2 months"
+                            </div>
+                            <div
+                              style="display: flex; gap: 4%; padding: 10px 0px"
+                            >
+                              <div>
+                                <img
+                                  src="https://assets-global.website-files.com/621f6320a4c8a1030a6a2d65/63abe1255bfef421d293d486_chaticon.svg"
+                                  alt=""
+                                  srcset=""
+                                  id="ijij"
+                                />
+                              </div>
+                              <div id="uiiii">
+                                <strong>Sachin Jaiswal, HR & Admin</strong>
+                                <br />
+                                Business Process Services Pvt Ltd.
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="item">
+                  <div class="row">
+                    <div class="col-lg-12">
+                      <div
+                        class="card"
+                        style="
+                          background-color: #0e082e;
+                          display: flex;
+                          flex-direction: row;
+                          justify-content: center;
+                          right: 10%;
+                        "
+                        id="jini"
+                      >
+                        <div>
+                          <img
+                            src="https://assets-global.website-files.com/621f6320a4c8a1030a6a2d65/637df72d6568e47a685155ae_Will%20We360.ai%20Employee%20Tracking%20App%20Suit%20My%20Business%20Needs.webp"
+                            class="img-fluid"
+                            srcset=""
+                            style="
+                              height: 387px;
+                              width: 630px;
+                              background-position: top;
+                            "
+                            id="arrange-model"
+                          />
+                        </div>
+                        <div>
+                          <div class="card down-town">
+                            <div
+                              class="card-text font-stylish"
+                              style="font-size: 18px; font-weight: 600"
+                            >
+                              "
+                              <span style="color: #7b61ff"
+                                >I've improved as a manager after adopting
+                                We360.ai into my organisation.</span
+                              >
+                              I am able to distribute workload based on my
+                              team’s working health."
+                            </div>
+                            <div
+                              style="display: flex; gap: 4%; padding: 10px 0px"
+                            >
+                              <div>
+                                <img
+                                  src="https://assets-global.website-files.com/621f6320a4c8a1030a6a2d65/63abe1255bfef421d293d486_chaticon.svg"
+                                  alt=""
+                                  srcset=""
+                                  id="ijij"
+                                />
+                              </div>
+                              <div id="uiiii">
+                                <strong>Sagar Patil, IT Manager </strong><br />
+                                Mind Technologies Pvt. Ltd.
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#carouselExample"
+              data-bs-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#carouselExample"
+              data-bs-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+          <!-- Additional Slides (if needed) -->
+          <!-- Slide 2, Slide 3, ... -->
+        </div>
+      </div>
+    </section>
+    <!-- Slider Section -->
+
+    <!-- FAQ Accordion Section -->
+    <section>
+      <div
+        class="container-fluid"
+        style="
+          background-color: rgba(123, 97, 255, 0.05);
+          padding: 150px 0px;
+          border-top: 1px solid #e5e0ff;
+          border-bottom: 1px solid #e5e0ff;
+        "
+      >
+        <h1
+          style="
+            color: #1d115a;
+            text-align: center;
+            margin-bottom: 26px;
+            font-size: 2.8em;
+            font-weight: 900;
+          "
+        >
+          Frequently Asked Questions
+        </h1>
+        <p
+          style="
+            color: rgba(68, 79, 96, 0.8);
+            text-align: center;
+            margin: auto 15px 10px 0;
+            padding-top: 10px;
+            padding-right: 0;
+            font-size: 14px;
+          "
+        >
+          Below are some common questions from our customers that may very well
+          give you the answer you are looking for.
+        </p>
+        <div class="container mt-5">
+          <div class="row mb-4">
+            <div class="col-md-6">
+              <div class="accordion" id="accordionExample1">
+                <div class="accordion-item">
+                  <!-- Accordion Item #1 content here -->
+                  <h2 class="accordion-header">
+                    <button
+                      class="accordion-button"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseOne"
+                      aria-expanded="true"
+                      aria-controls="collapseOne"
+                    >
+                      How much does it cost ?
+                    </button>
+                  </h2>
+                  <div
+                    id="collapseOne"
+                    class="accordion-collapse collapse"
+                    data-bs-parent="#accordionExample1"
+                  >
+                    <div class="accordion-body">
+                      <p
+                        style="
+                          color: var(--dark-slate-blue);
+                          padding-bottom: 0;
+                          padding-left: 0;
+                          padding-right: 0;
+                          font-size: 15px;
+                          line-height: 22px;
+                        "
+                      >
+                        You can see this at the <a href="">pricing</a> page.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="accordion" id="accordionExample2">
+                <div class="accordion-item">
+                  <!-- Accordion Item #2 content here -->
+                  <h2 class="accordion-header">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseTwo"
+                      aria-expanded="false"
+                      aria-controls="collapseTwo"
+                    >
+                      How much time does it take to use we360.ai ?
+                    </button>
+                  </h2>
+                  <div
+                    id="collapseTwo"
+                    class="accordion-collapse collapse"
+                    data-bs-parent="#accordionExample"
+                  >
+                    <div class="accordion-body">
+                      <p
+                        style="
+                          color: var(--dark-slate-blue);
+                          padding-bottom: 0;
+                          padding-left: 0;
+                          padding-right: 0;
+                          font-size: 15px;
+                          line-height: 22px;
+                        "
+                      >
+                        The initial set up will take around 10 minutes for the
+                        admin and 3-5 minutes for the users of the software plus
+                        a few minutes to watchst
+                        <strong>training videos</strong>.After that it takes
+                        very little time each day (a few minutes)
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row mb-4">
+            <div class="col-md-6">
+              <div class="accordion" id="accordionExample3">
+                <div class="accordion-item">
+                  <!-- Accordion Item #1 content here -->
+                  <h2 class="accordion-header">
+                    <button
+                      class="accordion-button"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseThree"
+                      aria-expanded="true"
+                      aria-controls="collapseOne"
+                    >
+                      Can We360.ai Monitor the Website that I or my team visit?
+                    </button>
+                  </h2>
+                  <div
+                    id="collapseThree"
+                    class="accordion-collapse collapse"
+                    data-bs-parent="#accordionExample3"
+                  >
+                    <div class="accordion-body">
+                      <p
+                        style="
+                          color: var(--dark-slate-blue);
+                          padding-bottom: 0;
+                          padding-left: 0;
+                          padding-right: 0;
+                          font-size: 15px;
+                          line-height: 22px;
+                        "
+                      >
+                        Yes. We360.ai’s reports will give you detailed insights
+                        into which websites are being used and for how long. You
+                        can access these reports online, and can also receive
+                        them weekly by email.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="accordion" id="accordionExample4">
+                <div class="accordion-item">
+                  <!-- Accordion Item #2 content here -->
+                  <h2 class="accordion-header">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseFour"
+                      aria-expanded="false"
+                      aria-controls="collapseTwo"
+                    >
+                      Is my data stored in secure environment ?
+                    </button>
+                  </h2>
+                  <div
+                    id="collapseFour"
+                    class="accordion-collapse collapse"
+                    data-bs-parent="#accordionExample4"
+                  >
+                    <div class="accordion-body">
+                      <p
+                        style="
+                          color: var(--dark-slate-blue);
+                          padding-bottom: 0;
+                          padding-left: 0;
+                          padding-right: 0;
+                          font-size: 15px;
+                          line-height: 22px;
+                        "
+                      >
+                        For We360.ai , Your privacy will always remain our
+                        utmost priority!All communication to the server is
+                        secured by SSL encryption. The files on the server are
+                        encrypted to provide an extra level of security for
+                        company data. The servers are located in secure
+                        enterprise data center facilities with 24/7 monitoring
+                        and hosting support.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="accordion" id="accordionExample5">
+                <div class="accordion-item">
+                  <!-- Accordion Item #1 content here -->
+                  <h2 class="accordion-header">
+                    <button
+                      class="accordion-button"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseFive"
+                      aria-expanded="true"
+                      aria-controls="collapseOne"
+                    >
+                      What are the hardware and software requirements?
+                    </button>
+                  </h2>
+                  <div
+                    id="collapseFive"
+                    class="accordion-collapse collapse"
+                    data-bs-parent="#accordionExample5"
+                  >
+                    <div class="accordion-body">
+                      <p
+                        style="
+                          color: var(--dark-slate-blue);
+                          padding-bottom: 0;
+                          padding-left: 0;
+                          padding-right: 0;
+                          font-size: 15px;
+                          line-height: 22px;
+                        "
+                      >
+                        We360.ai’s desktop application runs smoothly on macOS
+                        10.13 (High Sierra) and above, and all Windows computers
+                        with Windows 8 or above OS.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="accordion" id="accordionExample6">
+                <div class="accordion-item">
+                  <!-- Accordion Item #2 content here -->
+                  <h2 class="accordion-header">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseSix"
+                      aria-expanded="false"
+                      aria-controls="collapseTwo"
+                    >
+                      Can users record time when offline ?
+                    </button>
+                  </h2>
+                  <div
+                    id="collapseSix"
+                    class="accordion-collapse collapse"
+                    data-bs-parent="#accordionExample6"
+                  >
+                    <div class="accordion-body">
+                      <p
+                        style="
+                          color: var(--dark-slate-blue);
+                          padding-bottom: 0;
+                          padding-left: 0;
+                          padding-right: 0;
+                          font-size: 15px;
+                          line-height: 22px;
+                        "
+                      >
+                        Yes We360.ai tracks work even when not connected to the
+                        Internet. The data will be uploaded to the Internet when
+                        the Internet connection is restored.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- FAQ Accordion Section -->
+{% comment %} 
+    <!-- Footer Section -->
+
+    <section>
+      <footer class="py-4">
+        <div class="container hide-content-for-responsive">
+          <hr class="my-5" />
+          <div class="row">
+            <div class="col-lg-2">
+              <h5 class="fw-bold">Explore</h5>
+              <ul class="list-unstyled mt-4">
+                <li class="mt-3"><a href="#">All Features</a></li>
+                <li class="mt-3"><a href="#">Pricing</a></li>
+                <li class="mt-3"><a href="#">Guided Demo</a></li>
+                <li class="mt-3"><a href="#">Partners</a></li>
+                <li class="mt-3"><a href="#">Sign in</a></li>
+                <li class="mt-3"><a href="#">FAQ</a></li>
+                <li class="mt-3"><a href="#">Community</a></li>
+                <li class="mt-3"><a href="#">Downloads</a></li>
+              </ul>
+            </div>
+
+            <div class="col-lg-2">
+              <h5 class="fw-bold">Solution</h5>
+              <ul class="list-unstyled mt-4">
+                <li class="mt-3"><a href="#">Workforce Analytics</a></li>
+                <li class="mt-3"><a href="#">Productivity</a></li>
+                <li class="mt-3"><a href="#">Employee Monitoring</a></li>
+                <li class="mt-3"><a href="#">Field Tracking Software</a></li>
+                <li class="mt-3"><a href="#">Time Tracking</a></li>
+                <li class="mt-3"><a href="#">Hybrid & Remote Workforce</a></li>
+                <li class="mt-3"><a href="#">Project & Tasks</a></li>
+              </ul>
+            </div>
+
+            <div class="col-lg-2">
+              <h5 class="fw-bold">About Us</h5>
+              <ul class="list-unstyled mt-4">
+                <li class="mt-3"><a href="#">Our Company</a></li>
+                <li class="mt-3"><a href="#">Awards</a></li>
+                <li class="mt-3"><a href="#">Meet the team</a></li>
+                <li class="mt-3"><a href="#">Contact us</a></li>
+              </ul>
+            </div>
+
+            <div class="col-lg-2">
+              <h5 class="fw-bold">Compare</h5>
+              <ul class="list-unstyled mt-4">
+                <li class="mt-3"><a href="#">Activtrak alternative</a></li>
+                <li class="mt-3"><a href="#">Desktime alternative</a></li>
+                <li class="mt-3"><a href="#">Hubstaff alternative</a></li>
+                <li class="mt-3"><a href="#">Insightful alternative</a></li>
+                <li class="mt-3"><a href="#">Timedoctor alternative</a></li>
+              </ul>
+            </div>
+
+            <div class="col-lg-2">
+              <h5 class="fw-bold">Resources</h5>
+              <ul class="list-unstyled mt-4">
+                <li class="mt-3"><a href="#">Blog</a></li>
+                <li class="mt-3"><a href="#">Ebooks</a></li>
+                <li class="mt-3"><a href="#">Case studies</a></li>
+                <li class="mt-3"><a href="#">Webinars</a></li>
+                <li class="mt-3"><a href="#">HR Glossary</a></li>
+                <li class="mt-3"><a href="#">Job Descriptions</a></li>
+                <li class="mt-3"><a href="#">Templates</a></li>
+                <li class="mt-3"><a href="#">Help Center</a></li>
+                <li class="mt-3"><a href="#">Video Tutorials</a></li>
+              </ul>
+            </div>
+
+            <div class="col-lg-2">
+              <h5 class="fw-bold">Industries</h5>
+              <ul class="list-unstyled mt-4">
+                <li class="mt-3"><a href="#">BFSI</a></li>
+                <li class="mt-3"><a href="#">IT</a></li>
+                <li class="mt-3"><a href="#">BPO</a></li>
+                <li class="mt-3"><a href="#">Digital Marketing Agency</a></li>
+                <li class="mt-3"><a href="#">Edtech</a></li>
+                <li class="mt-3"><a href="#">Healthcare</a></li>
+                <li class="mt-3"><a href="#">HR & Staffing</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <hr class="my-4" />
+
+        <div
+          class="container border rounded-4 py-3"
+          style="background-color: rgb(212, 207, 207)"
+        >
+          <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-12">
+              <span>Call us On:</span>
+              <span class="fw-bold ms-lg-3">1001 22010 2233</span>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12">
+              <span>For Sales </span>
+              <span class="fw-bold ms-lg-3">sales@we360.ai </span>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12">
+              <span>For Support </span>
+              <span class="fw-bold ms-lg-3">support@we360.ai </span>
+            </div>
+          </div>
+        </div>
+
+        <hr class="my-4" />
+        <div class="text-start mt-4 container">
+          <p>&copy; 2024 Zenstack Technologies Inc. All rights reserved</p>
+        </div>
+
+        <div class="accordion1 accordion-flush" id="accordionFlushExample">
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#flush-collapseOne"
+                aria-expanded="false"
+                aria-controls="flush-collapseOne"
+              >
+                Explore
+              </button>
+            </h2>
+            <div
+              id="flush-collapseOne"
+              class="accordion-collapse collapse"
+              data-bs-parent="#accordionFlushExample"
+            >
+              <div class="accordion-body">
+                <ul class="list-unstyled mt-4">
+                  <li class="mt-3"><a href="#">All Features</a></li>
+                  <li class="mt-3"><a href="#">Pricing</a></li>
+                  <li class="mt-3"><a href="#">Guided Demo</a></li>
+                  <li class="mt-3"><a href="#">Partners</a></li>
+                  <li class="mt-3"><a href="#">Sign in</a></li>
+                  <li class="mt-3"><a href="#">FAQ</a></li>
+                  <li class="mt-3"><a href="#">Community</a></li>
+                  <li class="mt-3"><a href="#">Downloads</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#flush-collapseTwo"
+                aria-expanded="false"
+                aria-controls="flush-collapseTwo"
+              >
+                Solution
+              </button>
+            </h2>
+            <div
+              id="flush-collapseTwo"
+              class="accordion-collapse collapse"
+              data-bs-parent="#accordionFlushExample"
+            >
+              <div class="accordion-body">
+                <ul class="list-unstyled mt-4">
+                  <li class="mt-3"><a href="#">Workforce Analytics</a></li>
+                  <li class="mt-3"><a href="#">Productivity</a></li>
+                  <li class="mt-3"><a href="#">Employee Monitoring</a></li>
+                  <li class="mt-3"><a href="#">Field Tracking Software</a></li>
+                  <li class="mt-3"><a href="#">Time Tracking</a></li>
+                  <li class="mt-3">
+                    <a href="#">Hybrid & Remote Workforce</a>
+                  </li>
+                  <li class="mt-3"><a href="#">Project & Tasks</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#flush-collapseThree"
+                aria-expanded="false"
+                aria-controls="flush-collapseThree"
+              >
+                About Us
+              </button>
+            </h2>
+            <div
+              id="flush-collapseThree"
+              class="accordion-collapse collapse"
+              data-bs-parent="#accordionFlushExample"
+            >
+              <div class="accordion-body">
+                <ul class="list-unstyled mt-4">
+                  <li class="mt-3"><a href="#">Our Company</a></li>
+                  <li class="mt-3"><a href="#">Awards</a></li>
+                  <li class="mt-3"><a href="#">Meet the team</a></li>
+                  <li class="mt-3"><a href="#">Contact us</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#flush-collapseFour"
+                aria-expanded="false"
+                aria-controls="flush-collapseFour"
+              >
+                Compare
+              </button>
+            </h2>
+            <div
+              id="flush-collapseFour"
+              class="accordion-collapse collapse"
+              data-bs-parent="#accordionFlushExample"
+            >
+              <div class="accordion-body">
+                <ul class="list-unstyled mt-4">
+                  <li class="mt-3"><a href="#">Activtrak alternative</a></li>
+                  <li class="mt-3"><a href="#">Desktime alternative</a></li>
+                  <li class="mt-3"><a href="#">Hubstaff alternative</a></li>
+                  <li class="mt-3"><a href="#">Insightful alternative</a></li>
+                  <li class="mt-3"><a href="#">Timedoctor alternative</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#flush-collapseFive"
+                aria-expanded="false"
+                aria-controls="flush-collapseFive"
+              >
+                Resources
+              </button>
+            </h2>
+            <div
+              id="flush-collapseFive"
+              class="accordion-collapse collapse"
+              data-bs-parent="#accordionFlushExample"
+            >
+              <div class="accordion-body">
+                <ul class="list-unstyled mt-4">
+                  <li class="mt-3"><a href="#">Blog</a></li>
+                  <li class="mt-3"><a href="#">Ebooks</a></li>
+                  <li class="mt-3"><a href="#">Case studies</a></li>
+                  <li class="mt-3"><a href="#">Webinars</a></li>
+                  <li class="mt-3"><a href="#">HR Glossary</a></li>
+                  <li class="mt-3"><a href="#">Job Descriptions</a></li>
+                  <li class="mt-3"><a href="#">Templates</a></li>
+                  <li class="mt-3"><a href="#">Help Center</a></li>
+                  <li class="mt-3"><a href="#">Video Tutorials</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#flush-collapseSix"
+                aria-expanded="false"
+                aria-controls="flush-collapseSix"
+              >
+                Industries
+              </button>
+            </h2>
+            <div
+              id="flush-collapseSix"
+              class="accordion-collapse collapse"
+              data-bs-parent="#accordionFlushExample"
+            >
+              <div class="accordion-body">
+                <ul class="list-unstyled mt-4">
+                  <li class="mt-3"><a href="#">BFSI</a></li>
+                  <li class="mt-3"><a href="#">IT</a></li>
+                  <li class="mt-3"><a href="#">BPO</a></li>
+                  <li class="mt-3"><a href="#">Digital Marketing Agency</a></li>
+                  <li class="mt-3"><a href="#">Edtech</a></li>
+                  <li class="mt-3"><a href="#">Healthcare</a></li>
+                  <li class="mt-3"><a href="#">HR & Staffing</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </section>
+
+    <!-- Footer Section -->
+  </body>
+</html> {% endcomment %}
+{% endblock body %}

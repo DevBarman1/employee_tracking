@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contact_page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+ <style>
+      /* .navbar-main-box{
+        background-color: red !important;
+        width: 100% !important;
+         position: fixed !important;;
+            background-color: wheat;
+            width: 100% !important;
+            z-index: 999;
+      } */
+      /* .navbar{
+         position: fixed;
+            background-color: wheat;
+            width: 100%;
+            z-index: 999;
+      } */
+      .dropdown:hover > .dropdown-menu {
+        display: block;
+      }
+
+      /* Added CSS for hover effect */
+      .nav-item:hover .dropdown-menu {
+        display: block;
+        align-items: center;
+      }
+
+      .navbar-nav .nav-item .dropdown-menu {
+        margin-top: 0;
+      }
+      section footer .list-unstyled li a {
+        color: inherit; /* Inherits text color from parent */
+        text-decoration: none; /* Removes default underline */
+        cursor: pointer; /* Changes cursor to pointer */
+      }
+
+      section footer .list-unstyled li a:hover {
+        color: blue; /* Changes text color to blue on hover */
+      }
+
+      .accordion1 {
+        display: none;
+      }
+      .accordion-button:not(.collapsed) {
+        background-color: white !important;
+        border: 0px !important;
+      }
+      .accordion-button::after {
+        background-color: #ffb800;
+        font-weight: 900;
+        padding: 15px;
+        background-position-x: center;
+        background-position: center;
+        border-radius: 50%;
+      }
+
+      @media only screen and (max-width: 768px) {
+        .hide-content-for-responsive {
+          display: none; /* Hide red div at 320px */
+        }
+
+        .accordion {
+          display: block; /* Show accordion at 320px */
+        }
+      }
+      .hover-effect:hover {
+        background-color: #211f54;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+    </style>
+<style>
+     body {
+      font-family: 'Poppins', sans-serif; /* Apply Poppins font to the body */
+      scroll-behavior: smooth;
+    }
+    .btn-style-form{
+        padding: 13px 35px;
+    cursor: pointer;
+    background-color: #ffb800;
+    border: 1px solid #ffb800;
+    transition: ease-in-out all 0.5ms;
+    margin-top: 0px;
+    border-radius: 3px;
+    color: #000;
+    font-weight: 600;
+    }
+</style>
+<body>
+    <div class="container py-5">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="card" style="background-color: #f7f7ff;
+                border-radius: 24px;
+                padding: 32px;">
+
+                <h1 style="    color: #1d115a;
+                letter-spacing: -1px;
+                margin-top: 17px;
+                margin-bottom: 12px;
+                font-size: 3.3em;
+                font-weight: 900;
+               ">Contact Us
+                </h1>
+                <p>Our product specialist will guide you through key features of our product that is relevant to your business.
+                </p>
+                <hr>
+
+                <h2 style="color: #1d115a;
+                font-size: 2em;
+                font-weight: 900;
+             ">
+                    Sales Inquiries
+
+                </h2>
+                <p>INTERESTED IN OUR PRODUCT?
+
+                </p>
+                <p>✉️sales@we360.ai
+                </p>
+                <hr>
+
+
+                <div class="row" style="margin-bottom: 160px;">
+                    <span class="col-lg-6">
+                        <h1 style="color: #1d115a;
+                        font-size: 2em;
+                        font-weight: 900;
+                     " >For Support
+                        </h1>
+                        <p>✉️ support@we360.ai
+                        </p>
+                    </span>
+                    <span class="col-lg-6">
+                        <h1 style="color: #1d115a;
+                        font-size: 2em;
+                        font-weight: 900;
+                     ">Call us on
+                        </h1>
+                        <p>📞 0124 6882 771</p>
+                    </span>
+                </div>
+            </div>
+        </div>
+
+            <div class="col-lg-6">
+
+                <div class="card border-0">
+                    <div class="card-title " style="color: #7b61ff;   
+                    letter-spacing: -1px;
+                    margin-top: 25px;
+                    margin-bottom: 12px;
+                    font-size: 3.6em;
+                    line-height: 1.2;
+                    font-weight: 800;">
+                        Schedule a call with our team.
+                    </div>
+                    <div class="card-text py-3">
+                        We'll get back to you within 24 hours
+
+
+                    </div>
+
+                    <div class="row flex-column">
+                        <div class="row">
+                          <div class="col-lg-6">
+                            <div class="mb-3">
+                              <input
+                                type="text"
+                                class="form-control for-input"
+                                id="exampleFormControlInput1"
+                                placeholder="First Name *"
+                                style="color: #232226;
+                                background-color: rgba(23, 22, 26, 0.04);
+                                border: 1px solid transparent;
+                                width: 100%;
+                                padding: 14px 15px;
+                                line-height: 1.3;
+                                border-radius: 4px;"
+                                
+                              />
+                            </div>
+                          </div>
+                          <div class="col-lg-6">
+                            <div class="mb-3">
+                              <input
+                                type="email"
+                                class="form-control for-input"
+                                id="exampleFormControlInput2"
+                                placeholder="Last Name *"
+                                style="color: #232226;
+                                background-color: rgba(23, 22, 26, 0.04);
+                                border: 1px solid transparent;
+                                width: 100%;
+                                padding: 14px 15px;
+                                line-height: 1.3;
+                                border-radius: 4px;"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row flex-column">
+                          <div class="col-lg-12">
+                            <div class="mb-3">
+                              <input
+                                type="email"
+                                class="form-control for-input"
+                                id="exampleFormControlInput3"
+                                placeholder="Email *"
+                                style="color: #232226;
+                                background-color: rgba(23, 22, 26, 0.04);
+                                border: 1px solid transparent;
+                                width: 100%;
+                                padding: 14px 15px;
+                                line-height: 1.3;
+                                border-radius: 4px;"
+                              />
+                            </div>
+                          </div>
+                          <div class="col-lg-12">
+                            <div class="mb-3">
+                              <input
+                                type="email"
+                                class="form-control for-input"
+                                id="exampleFormControlInput4"
+                                placeholder="Phone *"
+                                style="color: #232226;
+                                background-color: rgba(23, 22, 26, 0.04);
+                                border: 1px solid transparent;
+                                width: 100%;
+                                padding: 14px 15px;
+                                line-height: 1.3;
+                                border-radius: 4px;"
+                              />
+                            </div>
+                          </div>
+                          <div class="col-lg-12">
+                            <div class="mb-3">
+                              <input
+                                type="email"
+                                class="form-control for-input"
+                                id="exampleFormControlInput4"
+                                placeholder="Company Name *"
+                                style="color: #232226;
+                                background-color: rgba(23, 22, 26, 0.04);
+                                border: 1px solid transparent;
+                                width: 100%;
+                                padding: 14px 15px;
+                                line-height: 1.3;
+                                border-radius: 4px;"
+                              />
+                            </div>
+                          </div>
+                          <div class="col-lg-12">
+                            <div class="mb-3">
+                              <input
+                                type="email"
+                                class="form-control for-input"
+                                id="exampleFormControlInput4"
+                                placeholder="What are you looking for ?"
+                                style="color: #232226;
+                                background-color: rgba(23, 22, 26, 0.04);
+                                border: 1px solid transparent;
+                                width: 100%;
+                                padding: 14px 15px;
+                                line-height: 1.3;
+                                border-radius: 4px;"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                        <div class="mb-3">
+                          <button type="button" class="btn btn-warning btn-style-form">
+                            Submit
+                          </button>
+                        </div>
+                      </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+  <!-- Footer Section -->
+
+    <section>
+      <footer class="py-4">
+        <div class="container hide-content-for-responsive">
+          <hr class="my-5" />
+          <div class="row">
+            <div class="col-lg-2">
+              <h5 class="fw-bold">Explore</h5>
+              <ul class="list-unstyled mt-4">
+                <li class="mt-3"><a href="#">All Features</a></li>
+                <li class="mt-3"><a href="#">Pricing</a></li>
+                <li class="mt-3"><a href="#">Guided Demo</a></li>
+                <li class="mt-3"><a href="#">Partners</a></li>
+                <li class="mt-3"><a href="#">Sign in</a></li>
+                <li class="mt-3"><a href="#">FAQ</a></li>
+                <li class="mt-3"><a href="#">Community</a></li>
+                <li class="mt-3"><a href="#">Downloads</a></li>
+              </ul>
+            </div>
+
+            <div class="col-lg-2">
+              <h5 class="fw-bold">Solution</h5>
+              <ul class="list-unstyled mt-4">
+                <li class="mt-3"><a href="#">Workforce Analytics</a></li>
+                <li class="mt-3"><a href="#">Productivity</a></li>
+                <li class="mt-3"><a href="#">Employee Monitoring</a></li>
+                <li class="mt-3"><a href="#">Field Tracking Software</a></li>
+                <li class="mt-3"><a href="#">Time Tracking</a></li>
+                <li class="mt-3"><a href="#">Hybrid & Remote Workforce</a></li>
+                <li class="mt-3"><a href="#">Project & Tasks</a></li>
+              </ul>
+            </div>
+
+            <div class="col-lg-2">
+              <h5 class="fw-bold">About Us</h5>
+              <ul class="list-unstyled mt-4">
+                <li class="mt-3"><a href="#">Our Company</a></li>
+                <li class="mt-3"><a href="#">Awards</a></li>
+                <li class="mt-3"><a href="#">Meet the team</a></li>
+                <li class="mt-3"><a href="#">Contact us</a></li>
+              </ul>
+            </div>
+
+            <div class="col-lg-2">
+              <h5 class="fw-bold">Compare</h5>
+              <ul class="list-unstyled mt-4">
+                <li class="mt-3"><a href="#">Activtrak alternative</a></li>
+                <li class="mt-3"><a href="#">Desktime alternative</a></li>
+                <li class="mt-3"><a href="#">Hubstaff alternative</a></li>
+                <li class="mt-3"><a href="#">Insightful alternative</a></li>
+                <li class="mt-3"><a href="#">Timedoctor alternative</a></li>
+              </ul>
+            </div>
+
+            <div class="col-lg-2">
+              <h5 class="fw-bold">Resources</h5>
+              <ul class="list-unstyled mt-4">
+                <li class="mt-3"><a href="#">Blog</a></li>
+                <li class="mt-3"><a href="#">Ebooks</a></li>
+                <li class="mt-3"><a href="#">Case studies</a></li>
+                <li class="mt-3"><a href="#">Webinars</a></li>
+                <li class="mt-3"><a href="#">HR Glossary</a></li>
+                <li class="mt-3"><a href="#">Job Descriptions</a></li>
+                <li class="mt-3"><a href="#">Templates</a></li>
+                <li class="mt-3"><a href="#">Help Center</a></li>
+                <li class="mt-3"><a href="#">Video Tutorials</a></li>
+              </ul>
+            </div>
+
+            <div class="col-lg-2">
+              <h5 class="fw-bold">Industries</h5>
+              <ul class="list-unstyled mt-4">
+                <li class="mt-3"><a href="#">BFSI</a></li>
+                <li class="mt-3"><a href="#">IT</a></li>
+                <li class="mt-3"><a href="#">BPO</a></li>
+                <li class="mt-3"><a href="#">Digital Marketing Agency</a></li>
+                <li class="mt-3"><a href="#">Edtech</a></li>
+                <li class="mt-3"><a href="#">Healthcare</a></li>
+                <li class="mt-3"><a href="#">HR & Staffing</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <hr class="my-4" />
+
+        <div
+          class="container border rounded-4 py-3"
+          style="background-color: rgb(212, 207, 207)"
+        >
+          <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-12">
+              <span>Call us On:</span>
+              <span class="fw-bold ms-lg-3">1001 22010 2233</span>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12">
+              <span>For Sales </span>
+              <span class="fw-bold ms-lg-3">sales@we360.ai </span>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12">
+              <span>For Support </span>
+              <span class="fw-bold ms-lg-3">support@we360.ai </span>
+            </div>
+          </div>
+        </div>
+
+        <hr class="my-4" />
+        <div class="text-start mt-4 container">
+          <p>&copy; 2024 Zenstack Technologies Inc. All rights reserved</p>
+        </div>
+
+        <div class="accordion1 accordion-flush" id="accordionFlushExample">
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#flush-collapseOne"
+                aria-expanded="false"
+                aria-controls="flush-collapseOne"
+              >
+                Explore
+              </button>
+            </h2>
+            <div
+              id="flush-collapseOne"
+              class="accordion-collapse collapse"
+              data-bs-parent="#accordionFlushExample"
+            >
+              <div class="accordion-body">
+                <ul class="list-unstyled mt-4">
+                  <li class="mt-3"><a href="#">All Features</a></li>
+                  <li class="mt-3"><a href="#">Pricing</a></li>
+                  <li class="mt-3"><a href="#">Guided Demo</a></li>
+                  <li class="mt-3"><a href="#">Partners</a></li>
+                  <li class="mt-3"><a href="#">Sign in</a></li>
+                  <li class="mt-3"><a href="#">FAQ</a></li>
+                  <li class="mt-3"><a href="#">Community</a></li>
+                  <li class="mt-3"><a href="#">Downloads</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#flush-collapseTwo"
+                aria-expanded="false"
+                aria-controls="flush-collapseTwo"
+              >
+                Solution
+              </button>
+            </h2>
+            <div
+              id="flush-collapseTwo"
+              class="accordion-collapse collapse"
+              data-bs-parent="#accordionFlushExample"
+            >
+              <div class="accordion-body">
+                <ul class="list-unstyled mt-4">
+                  <li class="mt-3"><a href="#">Workforce Analytics</a></li>
+                  <li class="mt-3"><a href="#">Productivity</a></li>
+                  <li class="mt-3"><a href="#">Employee Monitoring</a></li>
+                  <li class="mt-3"><a href="#">Field Tracking Software</a></li>
+                  <li class="mt-3"><a href="#">Time Tracking</a></li>
+                  <li class="mt-3">
+                    <a href="#">Hybrid & Remote Workforce</a>
+                  </li>
+                  <li class="mt-3"><a href="#">Project & Tasks</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#flush-collapseThree"
+                aria-expanded="false"
+                aria-controls="flush-collapseThree"
+              >
+                About Us
+              </button>
+            </h2>
+            <div
+              id="flush-collapseThree"
+              class="accordion-collapse collapse"
+              data-bs-parent="#accordionFlushExample"
+            >
+              <div class="accordion-body">
+                <ul class="list-unstyled mt-4">
+                  <li class="mt-3"><a href="#">Our Company</a></li>
+                  <li class="mt-3"><a href="#">Awards</a></li>
+                  <li class="mt-3"><a href="#">Meet the team</a></li>
+                  <li class="mt-3"><a href="#">Contact us</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#flush-collapseFour"
+                aria-expanded="false"
+                aria-controls="flush-collapseFour"
+              >
+                Compare
+              </button>
+            </h2>
+            <div
+              id="flush-collapseFour"
+              class="accordion-collapse collapse"
+              data-bs-parent="#accordionFlushExample"
+            >
+              <div class="accordion-body">
+                <ul class="list-unstyled mt-4">
+                  <li class="mt-3"><a href="#">Activtrak alternative</a></li>
+                  <li class="mt-3"><a href="#">Desktime alternative</a></li>
+                  <li class="mt-3"><a href="#">Hubstaff alternative</a></li>
+                  <li class="mt-3"><a href="#">Insightful alternative</a></li>
+                  <li class="mt-3"><a href="#">Timedoctor alternative</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#flush-collapseFive"
+                aria-expanded="false"
+                aria-controls="flush-collapseFive"
+              >
+                Resources
+              </button>
+            </h2>
+            <div
+              id="flush-collapseFive"
+              class="accordion-collapse collapse"
+              data-bs-parent="#accordionFlushExample"
+            >
+              <div class="accordion-body">
+                <ul class="list-unstyled mt-4">
+                  <li class="mt-3"><a href="#">Blog</a></li>
+                  <li class="mt-3"><a href="#">Ebooks</a></li>
+                  <li class="mt-3"><a href="#">Case studies</a></li>
+                  <li class="mt-3"><a href="#">Webinars</a></li>
+                  <li class="mt-3"><a href="#">HR Glossary</a></li>
+                  <li class="mt-3"><a href="#">Job Descriptions</a></li>
+                  <li class="mt-3"><a href="#">Templates</a></li>
+                  <li class="mt-3"><a href="#">Help Center</a></li>
+                  <li class="mt-3"><a href="#">Video Tutorials</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#flush-collapseSix"
+                aria-expanded="false"
+                aria-controls="flush-collapseSix"
+              >
+                Industries
+              </button>
+            </h2>
+            <div
+              id="flush-collapseSix"
+              class="accordion-collapse collapse"
+              data-bs-parent="#accordionFlushExample"
+            >
+              <div class="accordion-body">
+                <ul class="list-unstyled mt-4">
+                  <li class="mt-3"><a href="#">BFSI</a></li>
+                  <li class="mt-3"><a href="#">IT</a></li>
+                  <li class="mt-3"><a href="#">BPO</a></li>
+                  <li class="mt-3"><a href="#">Digital Marketing Agency</a></li>
+                  <li class="mt-3"><a href="#">Edtech</a></li>
+                  <li class="mt-3"><a href="#">Healthcare</a></li>
+                  <li class="mt-3"><a href="#">HR & Staffing</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </section>
+
+    <!-- Footer Section -->
+</body>
+</html>

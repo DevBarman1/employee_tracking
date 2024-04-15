@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>We360.ai | Award Winning Employee Monitoring Software</title>
+    <link rel="stylesheet" href="static/style.css" />
+    <script src="static/script.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <style>
+      {% comment %} ------------------------------- {% endcomment %}
+      body {
+        font-family: sans-serif !important;
+      }
+      .nav-tag-section {
+        height: 72px;
+        /* background-color: antiquewhite; */
+      }
+      .hero-section-main-div {
+        background-color: rgb(20, 20, 113);
+        width: 100%;
+        height: 900px;
+        border-bottom-left-radius: 90px;
+        border-bottom-right-radius: 90px;
+      }
+
+      @media only screen and (max-width: 768px) {
+        .hero-section-main-div {
+          background-color: rgb(20, 20, 113);
+          width: 100%;
+          height: 1200px;
+          border-bottom-left-radius: 90px;
+          border-bottom-right-radius: 90px;
+        }
+        .mt-sm-3{
+          margin-top: 15px !important;
+        }
+      }
+      .navbar-title-header {
+        font-weight: 500 !important;
+        font-family: sans-serif !important;
+        color: black;
+      }
+      .navbar-title-header:hover {
+        color: #ffb800 !important;
+      }
+      .dropdown-item {
+        margin-top: 20px;
+        font-weight: bold !important;
+        font-family: sans-serif !important;
+        width: 270px !important;
+        padding: 10px !important;
+        border-radius: 6px !important;
+        margin-left: 20px !important;
+      }
+      .dropdown-item:hover {
+        background-color: #ffb800 !important;
+      }
+      .dropdown-menu {
+        width: 300px !important;
+        text-align: left !important;
+      }
+      .right-side-nav-content {
+        /* border: 1px solid green !important; */
+        width: 400px !important;
+        justify-content: space-around;
+        /* padding: 25px !important; */
+        margin-top: 20px !important;
+      }
+      .navbar-nav .nav-item .dropdown-menu {
+        /* position: absolute; */
+        /* left: -94px;
+          top: 50px;
+          right: 0; */
+      }
+      .start-free-trail-btn {
+        width: 150px !important;
+        padding: 10px !important;
+      }
+
+      .hero-section-left-side-div {
+        /* margin-top: -120px !important; */
+      }
+
+      .schedule-button {
+        background-color: #ffb800 !important;
+        color: white !important;
+      }
+      .input-boxx {
+        background-color: #fffffc24 !important;
+        color: white !important;
+      }
+      .input-boxx::placeholder {
+        color: white !important;
+      }
+
+      .client-section-main-div {
+        height: 250px;
+        border-bottom: 1px solid blueviolet;
+      }
+
+      #pills-tab {
+        background-color: #f6f5ff !important;
+        width: 60%;
+        justify-content: space-around;
+        border-radius: 20px !important;
+        margin-top: 50px !important;
+      }
+      .feature-content-div {
+        height: 400px;
+        /* border: 1px solid green; */
+        width: 60%;
+        margin: auto;
+      }
+      .amazing-feature-left-div {
+        margin-top: 100px !important;
+      }
+      .nav-pills .nav-link.active,
+      .nav-pills .show > .nav-link {
+        background-color: #fff !important;
+      }
+
+      .make-every-min-main-box {
+        height: 700px;
+        background-color: aliceblue;
+      }
+ {% comment %} -------------------------------------------------------- {% endcomment %}
+      .navbar-main-box {
+      
+        position: fixed !important;
+        background-color: white;
+        z-index: 999;
+        
+      }
+
+      .dropdown:hover > .dropdown-menu {
+        display: block;
+      }
+
+      /* Added CSS for hover effect */
+      .nav-item:hover .dropdown-menu {
+        display: block;
+        align-items: center;
+      }
+
+      .navbar-nav .nav-item .dropdown-menu {
+        margin-top: 0;
+      }
+      section footer .list-unstyled li a {
+        color: inherit; /* Inherits text color from parent */
+        text-decoration: none; /* Removes default underline */
+        cursor: pointer; /* Changes cursor to pointer */
+      }
+
+      section footer .list-unstyled li a:hover {
+        color: blue; /* Changes text color to blue on hover */
+      }
+
+      .accordion1 {
+        display: none;
+      }
+      .accordion-button:not(.collapsed) {
+        background-color: white !important;
+        border: 0px !important;
+      }
+      .accordion-button::after {
+        background-color: #ffb800;
+        font-weight: 900;
+        padding: 15px;
+        background-position-x: center;
+        background-position: center;
+        border-radius: 50%;
+      }
+
+       @media only screen and (min-width: 1024px) {
+          .nav-tag-section {
+          padding-inline: 100px !important;
+        }
+        }
+      @media only screen and (max-width: 768px) {
+        .hide-content-for-responsive {
+          display: none; /* Hide red div at 320px */
+        }
+        .client-section-main-div{
+          display: none;
+        }
+        .build-teams{
+          margin-top: 1000px;
+        }
+        .demo123{
+          display: none;
+        }
+        .navbar-collapse-for-mobile{
+          background-color: white; 
+          height: 200px;
+          width: 100%;
+        }
+       
+        .right-side-nav-content{
+          display: none !important;
+          /* background-color: red; */
+
+        }
+        .build-teams{
+          margin-top: 100px;
+        }
+      
+        .accordion {
+          display: block; /* Show accordion at 320px */
+        }
+      }
+      .hover-effect:hover {
+        background-color: #211f54;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+    </style>
+
+    <style>
+      body {
+        font-family: sans-serif; /* Apply Poppins font to the body */
+      }
+      html,
+      body {
+        overflow-x: hidden !important;
+      }
+
+      .main-content-2 {
+        padding: 80px 20px;
+      }
+      .heading-25 {
+        color: #ffb800;
+        letter-spacing: 1.2px;
+        text-transform: uppercase;
+        padding-left: 0;
+        padding-right: 0;
+        font-size: 0.85rem;
+        font-weight: 500;
+        line-height: 1.4;
+        text-align: center;
+        padding-top: 55px;
+      }
+      .heading-27 {
+        text-align: center;
+        margin-bottom: 26px;
+        font-size: 2.8em;
+        line-height: 120%;
+        font-weight: 700;
+      }
+      .card-styling-1 {
+        border: 1px solid var(--stroke);
+        border-radius: 15px;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 32px;
+        display: flex;
+      }
+      .fluid-style-1 {
+        height: auto;
+      }
+      .down-town {
+        width: 40%;
+        padding: 30px;
+        position: absolute;
+        right: 0%;
+        top: 24%;
+        border-left-width: 4px;
+        border-left-color: #7b61ff;
+      }
+      #pills-tab {
+        background-color: #f6f5ff !important;
+        width: 80%;
+        justify-content: space-around;
+        border-radius: 20px !important;
+        margin-top: 50px !important;
+      }
+
+      .amazing-feature-left-div {
+        margin-top: 100px !important;
+      }
+
+      .for-head {
+        font-size: 2em;
+        font-weight: 700;
+        line-height: 120%;
+      }
+      .causal-card:hover .card {
+        box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+      }
+      .heading-h11 {
+        color: #1d115a;
+        font-size: 3.4em;
+        font-weight: 700;
+      }
+
+      .btn {
+        position: relative;
+        border: none;
+      }
+
+      .btn:hover {
+        border: 2px solid #ffcf70;
+      }
+
+      .arrow-icon {
+        background-color: #ffcf70;
+        padding: 18px;
+        border-radius: 27px;
+        position: relative;
+        left: 16px;
+      }
+
+      .arrow-icon::before {
+        content: "";
+        display: inline-block;
+        width: 0;
+        height: 0;
+        border-top: 10px solid transparent;
+        border-bottom: 10px solid transparent;
+        border-left: 10px solid white; /* Adjust color as needed */
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: -10px; /* Adjust distance from button text */
+        transition: right 0.3s; /* Only transition the right position */
+      }
+
+      .btn:hover .arrow-icon::before {
+        right: 0px; /* Move the arrow to the right */
+      }
+      .owl-carousel .owl-item img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+      @media (max-width: 768px) {
+        #knock-height {
+          height: 200vh !important;
+        }
+        .some-class {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+        .down-town {
+          width: 88% !important;
+          padding: 20px !important;
+          position: absolute !important;
+          right: 6% !important;
+          top: 58% !important;
+        }
+        .los-angles {
+          height: 110vh !important;
+        }
+        .font-stylish {
+          font-size: 15px !important;
+        }
+
+        #jini {
+          right: 0 !important;
+        }
+      }
+      @media (max-width: 1024px) {
+        #knock-height {
+          height: 150vh !important;
+        }
+        .some-class {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+        .card-text-here {
+          padding: 16px !important;
+        }
+        .down-town {
+          width: 40%;
+          padding: 30px;
+          position: absolute;
+          right: -3%;
+          top: 14%;
+        }
+        .carousel-control-next-icon {
+          position: absolute !important;
+          right: 40% !important;
+        }
+        .carousel-control-prev-icon {
+          position: absolute !important;
+          left: 50% !important;
+        }
+      }
+      @media (max-width: 426px) {
+        #knock-height {
+          height: 220vh !important;
+        }
+        .responsive-img {
+          height: 300px;
+          width: 297px;
+        }
+        .card-styling-1 {
+          margin-top: 10px;
+          margin-bottom: 10px;
+        }
+        #arrange-model {
+          height: 385px !important;
+          width: 630px !important;
+        }
+        .los-angles {
+          height: 130vh !important;
+        }
+        .down-town {
+          width: 100% !important;
+          padding: 8px !important;
+          position: absolute !important;
+          right: 0% !important;
+          top: 70% !important;
+        }
+      }
+      @media (max-width: 320px) {
+        #knock-height {
+          height: 245vh !important;
+        }
+        .responsive-img {
+          padding: 18px 1px !important ;
+        }
+        .los-angles {
+          height: 150vh !important;
+        }
+        #ijij {
+          height: 30px !important;
+        }
+        #uiiii {
+          font-size: 10px !important;
+        }
+        .down-town {
+          top: 60% !important;
+        }
+      }
+      @media (max-width: 576px) {
+        .card-text.font-stylish {
+          font-size: 12px !important; /* Adjust font size as needed */
+          line-height: 1.5; /* Adjust line height as needed */
+        }
+        #ddd {
+          font-size: 14px !important;
+        }
+        #uiiii {
+          font-size: 12px !important;
+        }
+        #ijij {
+          height: 35px !important;
+        }
+        .los-angles {
+          height: 118vh !important;
+        }
+      }
+
+      .heading-500 {
+        color: #ffb800;
+        letter-spacing: 1.2px;
+        text-transform: uppercase;
+        padding-left: 0;
+        padding-right: 0;
+        font-size: 0.85rem;
+        font-weight: 500;
+        line-height: 1.4;
+        text-transform: lowercase;
+        text-align: center;
+      }
+
+      .heading-600 {
+        color: #1d115a;
+        font-size: 40px;
+        font-weight: 800;
+        text-align: center;
+      }
+      #knock-height {
+        height: 135vh;
+      }
+
+      .carousel-control-next-icon {
+        width: 45px;
+        height: 45px;
+        background-color: #7b61ff;
+        border-radius: 16px;
+        font-size: 17px;
+        transition: all 0.2s;
+        position: absolute;
+        right: 60%;
+      }
+      .carousel-control-prev-icon {
+        width: 45px;
+        height: 45px;
+        background-color: #7b61ff;
+        border-radius: 16px;
+        font-size: 17px;
+        transition: all 0.2s;
+        position: absolute;
+        left: 118%;
+      }
+      @media (max-width: 376px) {
+        .down-town {
+          top: 66% !important;
+          position: absolute !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar Start  -->
+    <section class="container-fluid">
+      <nav
+        class="navbar navbar-expand-lg b container-fluid nav-tag-section navbar-main-box "
+       >
+        <div class="container-fluid">
+          <a class="navbar-brand" href="/"
+            ><img
+              src="https://assets-global.website-files.com/621f6320a4c8a1030a6a2d65/6446484b74010d971f17c01b_we360.ai%20logo%20128px%20main.webp"
+              alt=""
+          /></a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarScroll"
+            aria-controls="navbarScroll"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarScroll">
+            <ul
+              class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll navbar-collapse-for-mobile"
+              style="--bs-scroll-height: 400px; "
+            >
+              <li class="nav-item dropdown ms-4">
+                <a
+                  class="nav-link dropdown-toggle navbar-title-header"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Solution
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="/Workforce_analytics/"
+                      >Workforce Analytics</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="/EmployeeMonitering/"
+                      >Employee Monitoring</a
+                    >
+                  </li>
+                  <!-- <li><hr class="dropdown-divider" /></li> -->
+                  <li>
+                    <a class="dropdown-item" href="/FieldTracking/"
+                      >Field Tracking Software</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">See All Features</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="nav-item dropdown ms-4">
+                <a
+                  class="nav-link dropdown-toggle navbar-title-header"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Industries
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">IT</a></li>
+                  <li><a class="dropdown-item" href="#">BPO</a></li>
+                  <li><a class="dropdown-item" href="#">Edtech</a></li>
+                  <li>
+                    <a class="dropdown-item" href="#"
+                      >Digital Marketing Agency</a
+                    >
+                  </li>
+                  <li><a class="dropdown-item" href="#">HR & Staffing</a></li>
+                  <!-- <li><hr class="dropdown-divider" /></li> -->
+                </ul>
+              </li>
+
+              <li class="nav-item dropdown ms-4">
+                <a
+                  class="nav-link dropdown-toggle navbar-title-header"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  About Us
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Our Company</a></li>
+                  <li><a class="dropdown-item" href="#">Meet the Team</a></li>
+                  <li>
+                    <a class="dropdown-item" href="/contact/"
+                      >Contact Us</a
+                    >
+                  </li>
+                </ul>
+              </li>
+
+              <li class="nav-item ms-4">
+                <a
+                  class="nav-link navbar-title-header"
+                  href="/Pricing/"
+                  >Pricing</a
+                >
+              </li>
+            </ul>
+            <ul
+              class="d-flex list-unstyled right-side-nav-content text-decoration-none"
+            >
+              <li class="py-2">
+                <a class="text-decoration-none text-black" href="">122121212</a>
+              </li>
+              <li class="py-2">
+                <a class="text-decoration-none text-black" href="/login/">Login</a>
+              </li>
+              <button class="btn btn-warning start-free-trail-btn">
+                Start Free Trail
+              </button>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </section>
+    <!-- Navbar Start  -->

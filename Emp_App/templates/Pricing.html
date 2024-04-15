@@ -1,0 +1,777 @@
+{% extends "base.html" %}
+{% block body %}
+{% load static %}
+
+   <!-- Middle Section -->
+   <section class="py-5">
+     <div
+      class="container-fluid"
+      style="
+      margin-top: 100px;
+        background-color: #7b61ff;
+        height: 30vh;
+        border-bottom-left-radius: 60px;
+        border-bottom-right-radius: 60px;
+      "
+     >
+      <div
+        class="row"
+        style="color: #fff; text-align: center; padding: 45px; display: block"
+      >
+        <h1 style="font-size: 56px; font-weight: 800">Choose Your Plan!</h1>
+        <p>
+          Simple, transparent pricing that grows with you. Select any plan to
+          try for free.
+        </p>
+      </div>
+    </div>
+
+    <div class="container mt-5 d-flex justify-content-center">
+      <ul
+        class="nav nav-tabs"
+        id="myTab"
+        role="tablist"
+        style="background-color: #eae9ff; padding: 5px 8px; border-radius: 10px"
+      >
+        <li class="nav-item">
+          <a
+            class="nav-link active"
+            id="button1-tab"
+            data-toggle="tab"
+            href="#button1"
+            role="tab"
+            aria-controls="button1"
+            aria-selected="true"
+            >Monthly billing</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            id="button2-tab"
+            data-toggle="tab"
+            href="#button2"
+            role="tab"
+            aria-controls="button2"
+            aria-selected="false"
+            >Annual billing</a
+          >
+        </li>
+      </ul>
+    </div>
+
+
+    <div class="container">
+      <div class="row d-flex justify-content-center align-center">
+        <div class="tab-content" id="myTabContent">
+          <div
+            class="tab-pane fade show active"
+            id="button1"
+            role="tabpanel"
+            aria-labelledby="button1-tab"
+          >
+            <div class="row py-5">
+              <div class="col-lg-4 mb-md-3">
+                <div class="card">
+                  <div
+                    class="card-title"
+                    style="
+                      font-size: 1.6rem;
+                      color: black;
+                      font-weight: 700;
+                      text-align: center;
+                    "
+                  >
+                    Free
+                  </div>
+                  <div class="card-text align-center px-4">
+                    Basic productivity suite for individuals and organizations
+                  </div>
+                  <div
+                    class="card-title text-center"
+                    style="
+                      color: #07090d;
+                      font-family: Manrope, sans-serif;
+                      font-size: 3.2em;
+                      font-weight: 700;
+                    "
+                  >
+                    <span style="font-size: 28px">₹</span> 0
+                  </div>
+                  <span class="text text-center">/seat/month </span>
+                  <button
+                    type="button"
+                    class="btn btn-primary my-3 w-20"
+                    style="border-radius: 28px; padding: 10px 0px"
+                  >
+                    Try for Free
+                  </button>
+                  <span
+                    style="
+                      color: rgba(16, 24, 40, 0.7);
+                      font-size: 24px;
+                      font-weight: 600;
+                    "
+                    >Free plan includes:</span
+                  >
+                  <div class="row d-flex flex-column gap-3 py-5">
+                    <span style="border-radius: 20px">✅ Upto 3 Seats </span>
+                    <span>✅ Upto 3 Seats</span>
+                    <span>✅ Dashboard</span>
+                    <span>✅ Activity Levels </span>
+                    <span>✅ Screenshots </span>
+                    <span>✅ Settings </span>
+                    <span>✅ Data Retention (3 weeks) </span>
+                    <span>✅ Screenshot Capture Frequency (2 per hour) </span>
+                  </div>
+                  <button
+                  type="button"
+                  class="btn btn-primary my-3 w-20"
+                  style="border-radius: 28px; padding: 10px 0px"
+                >
+                  Try for Free
+                </button>
+                </div>
+              </div>
+              <div class="col-lg-4 mb-md-3">
+                <div class="card">
+                  <div
+                    class="card-title"
+                    style="
+                      font-size: 1.6rem;
+                      color: black;
+                      font-weight: 700;
+                      text-align: center;
+                    "
+                  >
+                    Starter
+                  </div>
+                  <div class="card-text align-center">
+                    Start your 360' productivity journey with our advanced
+                    features
+                  </div>
+                  <div
+                    class="card-title text-center"
+                    style="
+                      color: #07090d;
+                      font-family: Manrope, sans-serif;
+                      font-size: 3.2em;
+                      font-weight: 700;
+                    "
+                  >
+                    <span style="font-size: 28px">₹</span> 399
+                  </div>
+                  <span class="text text-center">/seat/month </span>
+                  <button
+                    type="button"
+                    class="btn btn-primary my-3 w-20"
+                    style="border-radius: 28px; padding: 10px 0px"
+                  >
+                    Try for Free
+                  </button>
+                  <span
+                    style="
+                      color: rgba(16, 24, 40, 0.7);
+                      font-size: 24px;
+                      font-weight: 600;
+                    "
+                    >Includes Free, plus:</span
+                  >
+
+                  <div class="row d-flex flex-column gap-3 py-5">
+                    <span style="border-radius: 20px">✅ Upto 3 Seats </span>
+                    <span>✅ Upto 3 Seats</span>
+                    <span>✅ Dashboard</span>
+                    <span>✅ Activity Levels </span>
+                    <span>✅ Screenshots </span>
+                    <span>✅ Settings </span>
+                    <span>✅ Data Retention (3 weeks) </span>
+                    <span>✅ Screenshot Capture Frequency (2 per hour) </span>
+
+                    <p style="font-size: 20px; font-weight: 700">Coming Soon</p>
+                    <span>✅ Data Retention (3 weeks) </span>
+                  </div>
+                  <button
+                  type="button"
+                  class="btn btn-primary my-3 w-20"
+                  style="border-radius: 28px; padding: 10px 0px"
+                >
+                  Try for Free
+                </button>
+                </div>
+              </div>
+              <div class="col-lg-4 mb-md-3">
+                <div class="card">
+                  <div
+                    class="card-title"
+                    style="
+                      font-size: 1.6rem;
+                      color: black;
+                      font-weight: 700;
+                      text-align: center;
+                    "
+                  >
+                    Pro
+                  </div>
+                  <div class="card-text align-center">
+                    All of our features for organizations at any scale
+                  </div>
+                  <div
+                    class="card-title text-center"
+                    style="
+                      color: #07090d;
+                      font-family: Manrope, sans-serif;
+                      font-size: 3.2em;
+                      font-weight: 700;
+                    "
+                  >
+                    <span style="font-size: 28px">₹</span> 599
+                  </div>
+                  <span class="text text-center">/seat/month </span>
+                  <button
+                    type="button"
+                    class="btn btn-primary my-3 w-20"
+                    style="border-radius: 28px; padding: 10px 0px"
+                  >
+                    Try for Free
+                  </button>
+                  <span
+                    style="
+                      color: rgba(16, 24, 40, 0.7);
+                      font-size: 24px;
+                      font-weight: 600;
+                    "
+                    >Includes Starter, plus:</span
+                  >
+                  <div class="row d-flex flex-column gap-3 py-5">
+                    <span style="border-radius: 20px">✅ Upto 3 Seats </span>
+                    <span>✅ Above 25 Seats</span>
+                    <span>✅ Workload Balance & Analysis</span>
+                    <span>✅ Productivity Goal Setting & Tracking </span>
+                    <span>✅ Classification of Websites & Apps Activity </span>
+                    <span>✅ Real Time Analytics </span>
+                    <span>✅ Screenshot Capture Frequency (12 Per hour) </span>
+                    <span>✅ Shift Management </span>
+
+                    <p>Reports (Automatic)</p>
+                    <span>✅ Integrations (HRMS) </span>
+                    <p style="font-size: 20px; font-weight: 700">Coming Soon</p>
+                    <span>✅ Data Retention (3 weeks) </span>
+                  <span>✅ Integrations (20+)</span>   
+                  <span>✅Chat</span>  
+                  <span> ✅Active Directory</span> 
+                   <span> ✅Location</span>
+                   <span>✅Filtering  </span>   
+                  </div>
+                  <button
+                  type="button"
+                  class="btn btn-primary my-3 w-20"
+                  style="border-radius: 28px; padding: 10px 0px"
+                >
+                  Try for Free
+                </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="tab-pane fade"
+            id="button2"
+            role="tabpanel"
+            aria-labelledby="button2-tab"
+          >
+          <div class="row py-5">
+            <div class="col-lg-4 mb-md-3">
+              <div class="card">
+                <div
+                  class="card-title"
+                  style="
+                    font-size: 1.6rem;
+                    color: black;
+                    font-weight: 700;
+                    text-align: center;
+                  "
+                >
+                  Free
+                </div>
+                <div class="card-text align-center px-4">
+                  Basic productivity suite for individuals and organizations
+                </div>
+                <div
+                  class="card-title text-center"
+                  style="
+                    color: #07090d;
+                    font-family: Manrope, sans-serif;
+                    font-size: 3.2em;
+                    font-weight: 700;
+                  "
+                >
+                  <span style="font-size: 28px">₹</span> 0
+                </div>
+                <span class="text text-center">/seat/month </span>
+                <button
+                  type="button"
+                  class="btn btn-primary my-3 w-20"
+                  style="border-radius: 28px; padding: 10px 0px"
+                >
+                  Try for Free
+                </button>
+                <span
+                  style="
+                    color: rgba(16, 24, 40, 0.7);
+                    font-size: 24px;
+                    font-weight: 600;
+                  "
+                  >Free plan includes:</span
+                >
+                <div class="row d-flex flex-column gap-3 py-5">
+                  <span style="border-radius: 20px">✅ Upto 3 Seats </span>
+                  <span>✅ Upto 3 Seats</span>
+                  <span>✅ Dashboard</span>
+                  <span>✅ Activity Levels </span>
+                  <span>✅ Screenshots </span>
+                  <span>✅ Settings </span>
+                  <span>✅ Data Retention (3 weeks) </span>
+                  <span>✅ Screenshot Capture Frequency (2 per hour) </span>
+                </div>
+                <button
+                type="button"
+                class="btn btn-primary my-3 w-20"
+                style="border-radius: 28px; padding: 10px 0px"
+              >
+                Try for Free
+              </button>
+              </div>
+            </div>
+            <div class="col-lg-4 mb-md-3">
+              <div class="card">
+                <div
+                  class="card-title"
+                  style="
+                    font-size: 1.6rem;
+                    color: black;
+                    font-weight: 700;
+                    text-align: center;
+                  "
+                >
+                  Starter
+                </div>
+                <div class="card-text align-center">
+                  Start your 360' productivity journey with our advanced
+                  features
+                </div>
+                <div
+                  class="card-title text-center"
+                  style="
+                    color: #07090d;
+                    font-family: Manrope, sans-serif;
+                    font-size: 3.2em;
+                    font-weight: 700;
+                  "
+                >
+                  <span style="font-size: 28px">₹</span>299
+                </div>
+                <span class="text text-center">/seat/month </span>
+                <button
+                  type="button"
+                  class="btn btn-primary my-3 w-20"
+                  style="border-radius: 28px; padding: 10px 0px"
+                >
+                  Try for Free
+                </button>
+                <span
+                  style="
+                    color: rgba(16, 24, 40, 0.7);
+                    font-size: 24px;
+                    font-weight: 600;
+                  "
+                  >Includes Free, plus:</span
+                >
+
+                <div class="row d-flex flex-column gap-3 py-5">
+                  <span style="border-radius: 20px">✅ Upto 3 Seats </span>
+                  <span>✅ Upto 3 Seats</span>
+                  <span>✅ Dashboard</span>
+                  <span>✅ Activity Levels </span>
+                  <span>✅ Screenshots </span>
+                  <span>✅ Settings </span>
+                  <span>✅ Data Retention (3 weeks) </span>
+                  <span>✅ Screenshot Capture Frequency (2 per hour) </span>
+
+                  <p style="font-size: 20px; font-weight: 700">Coming Soon</p>
+                  <span>✅ Data Retention (3 weeks) </span>
+                </div>
+                <button
+                type="button"
+                class="btn btn-primary my-3 w-20"
+                style="border-radius: 28px; padding: 10px 0px"
+              >
+                Try for Free
+              </button>
+              </div>
+            </div>
+            <div class="col-lg-4 mb-md-3">
+              <div class="card">
+                <div
+                  class="card-title"
+                  style="
+                    font-size: 1.6rem;
+                    color: black;
+                    font-weight: 700;
+                    text-align: center;
+                  "
+                >
+                  Pro
+                </div>
+                <div class="card-text align-center">
+                  All of our features for organizations at any scale
+                </div>
+                <div
+                  class="card-title text-center"
+                  style="
+                    color: #07090d;
+                    font-family: Manrope, sans-serif;
+                    font-size: 3.2em;
+                    font-weight: 700;
+                  "
+                >
+                  <span style="font-size: 28px">₹</span>399
+                </div>
+                <span class="text text-center">/seat/month </span>
+                <button
+                  type="button"
+                  class="btn btn-primary my-3 w-20"
+                  style="border-radius: 28px; padding: 10px 0px"
+                >
+                  Try for Free
+                </button>
+                <span
+                  style="
+                    color: rgba(16, 24, 40, 0.7);
+                    font-size: 24px;
+                    font-weight: 600;
+                  "
+                  >Includes Starter, plus:</span
+                >
+                <div class="row d-flex flex-column gap-3 py-5">
+                  <span style="border-radius: 20px">✅ Upto 3 Seats </span>
+                  <span>✅ Above 25 Seats</span>
+                  <span>✅ Workload Balance & Analysis</span>
+                  <span>✅ Productivity Goal Setting & Tracking </span>
+                  <span>✅ Classification of Websites & Apps Activity </span>
+                  <span>✅ Real Time Analytics </span>
+                  <span>✅ Screenshot Capture Frequency (12 Per hour) </span>
+                  <span>✅ Shift Management </span>
+
+                  <p>Reports (Automatic)</p>
+                  <span>✅ Integrations (HRMS) </span>
+                  <p style="font-size: 20px; font-weight: 700">Coming Soon</p>
+                  <span>✅ Data Retention (3 weeks) </span>
+                <span>✅ Integrations (20+)</span>   
+                <span>✅Chat</span>  
+                <span> ✅Active Directory</span> 
+                 <span> ✅Location</span>
+                 <span>✅Filtering  </span>   
+                </div>
+                <button
+                type="button"
+                class="btn btn-primary my-3 w-20"
+                style="border-radius: 28px; padding: 10px 0px"
+              >
+                Try for Free
+              </button>
+              </div>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="container-fluid" style="background-color: rgba(123,97,255,.05); padding: 150px 0px; border-top: 1px solid #e5e0ff; border-bottom: 1px solid #e5e0ff;">
+      <h1 style="color: #1d115a;
+      text-align: center;
+      margin-bottom: 26px;
+      font-size: 2.8em;
+      font-weight:900;
+  ">
+      Frequently Asked Questions
+      </h1>
+      <p style="color: rgba(68,79,96,.8); text-align: center;
+      margin: auto 15px 10px 0;
+      padding-top: 10px;
+      padding-right: 0;
+      font-size: 14px;">
+      Below are some common questions from our customers that may very well give you the answer you are looking for.
+      </p>
+      <div class="container mt-5">
+        <div class="row mb-4">
+          <div class="col-md-6">
+            <div class="accordion" id="accordionExample1">
+              <div class="accordion-item">
+                <!-- Accordion Item #1 content here -->
+                <h2 class="accordion-header">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    How much does it cost ?
+                  </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample1">
+                  <div class="accordion-body">
+                    <p  style="color: var(--dark-slate-blue);
+                    padding-bottom: 0;
+                    padding-left: 0;
+                    padding-right: 0;
+                    font-size: 15px;
+                    line-height: 22px;
+                ">You can see this at the <a href="">pricing</a> page.
+
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-md-6">
+            <div class="accordion" id="accordionExample2">
+              <div class="accordion-item">
+                <!-- Accordion Item #2 content here -->
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    How much time does it take to use we360.ai ?
+                  </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    <p style="color: var(--dark-slate-blue);
+                    padding-bottom: 0;
+                    padding-left: 0;
+                    padding-right: 0;
+                    font-size: 15px;
+                    line-height: 22px;
+                ">The initial set up will take around 10 minutes for the admin and 3-5 minutes for the users of the software plus a few minutes to watchst <strong>training videos</strong>.After that it takes very little time each day (a few minutes)</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="row mb-4">
+          <div class="col-md-6">
+            <div class="accordion" id="accordionExample3">
+              <div class="accordion-item">
+                <!-- Accordion Item #1 content here -->
+                <h2 class="accordion-header">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="true" aria-controls="collapseOne">
+                    Can We360.ai Monitor the Website that I or my team visit?
+                  </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample3">
+                  <div class="accordion-body">
+                    <p style="color: var(--dark-slate-blue);
+                    padding-bottom: 0;
+                    padding-left: 0;
+                    padding-right: 0;
+                    font-size: 15px;
+                    line-height: 22px;
+                ">Yes. We360.ai’s reports will give you detailed insights into which websites are being used and for how long. You can access these reports online, and can also receive them weekly by email.
+
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-md-6">
+            <div class="accordion" id="accordionExample4">
+              <div class="accordion-item">
+                <!-- Accordion Item #2 content here -->
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseTwo">
+                    Is my data stored in secure environment ?
+                  </button>
+                </h2>
+                <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample4">
+                  <div class="accordion-body">
+                    <p style="color: var(--dark-slate-blue);
+                    padding-bottom: 0;
+                    padding-left: 0;
+                    padding-right: 0;
+                    font-size: 15px;
+                    line-height: 22px;
+                ">For We360.ai , Your privacy will always remain our utmost priority!All communication to the server is secured by SSL encryption. The files on the server are encrypted to provide an extra level of security for company data. The servers are located in secure enterprise data center facilities with 24/7 monitoring and hosting support.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="accordion" id="accordionExample5">
+              <div class="accordion-item">
+                <!-- Accordion Item #1 content here -->
+                <h2 class="accordion-header">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="true" aria-controls="collapseOne">
+                    What are the hardware and software requirements?
+                  </button>
+                </h2>
+                <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample5">
+                  <div class="accordion-body">
+                    <p style="color: var(--dark-slate-blue);
+                    padding-bottom: 0;
+                    padding-left: 0;
+                    padding-right: 0;
+                    font-size: 15px;
+                    line-height: 22px;
+                " >We360.ai’s desktop application runs smoothly on macOS 10.13 (High Sierra) and above, and all Windows computers with Windows 8 or above OS.
+
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-md-6">
+            <div class="accordion" id="accordionExample6">
+              <div class="accordion-item">
+                <!-- Accordion Item #2 content here -->
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseTwo">
+                    Can users record time when offline ?
+                  </button>
+                </h2>
+                <div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionExample6">
+                  <div class="accordion-body">
+                    <p style="color: var(--dark-slate-blue);
+                    padding-bottom: 0;
+                    padding-left: 0;
+                    padding-right: 0;
+                    font-size: 15px;
+                    line-height: 22px;
+                ">Yes We360.ai tracks work even when not connected to the Internet. The data will be uploaded to the Internet when the Internet connection is restored.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="container-fluid" style="background-color: #0e082e; padding: 60px 0px;">
+      <div class="row" style="padding: 0px 10%;">
+        <h1 style="color: #fff; text-align: center; font-weight: 800; padding:30px 0px">How would you like to get started?
+        </h1>
+
+        <div class="col-lg-4">
+          <div class="card" style="padding: 48px; align-items: center;">
+            <img src="https://assets-global.website-files.com/621f6320a4c8a1030a6a2d65/62ecea239fea6f5160391832_streamlinehq-video-call-monitor-work-office-48.webp" alt="" srcset="" style="height: 50px;
+            width: 50px;
+            align-self: center;">
+            <div class="card-title" style="    margin-top: 10px;
+            margin-bottom: 0;
+            font-size: 24px;
+            color: #140855;
+            font-weight: 600;
+            line-height: 26px;
+            padding: 10px 0px;
+            
+            "
+            >
+              Personalized Demo
+            </div>
+            <div class="card-text" style="text-align: center; color: rgba(30,42,61,.7);">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique quos magni ea deserunt ducimus perspiciatis.
+            </div>
+            <div class="card-text" style="font-size: 12px;
+            font-weight: 500; padding: 15px 0px;">
+              Flexible with your schedule.
+
+
+            </div>
+            <div class="col-12" style="text-align: center;">
+              <button type="button" class="btn btn-primary" style="    padding: 10px 60px;
+              border-radius: 25px;">Schedule Now</button>
+
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="card" style="padding: 48px;">
+            <img src="https://assets-global.website-files.com/621f6320a4c8a1030a6a2d65/62ecea23a152cb8599678eea_streamlinehq-movies-clapboard-forward-images-videos-48.webp" alt="" srcset="" style="height: 50px;
+            width: 50px;
+            align-self: center;">
+            <div class="card-title" style="    margin-top: 10px;
+            margin-bottom: 0;
+            font-size: 24px;
+            color: #140855;
+            font-weight: 600;
+            line-height: 26px;
+            padding: 10px 0px;
+            text-align: center;
+            
+            ">
+              Recorded Demos
+            </div>
+            <div class="card-text" style="text-align: center; color: rgba(30,42,61,.7);">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique quos magni ea deserunt ducimus perspiciatis.
+            </div>
+            <div class="card-text" style="font-size: 12px;
+            font-weight: 500; padding: 15px 0px; text-align: center;">
+              Flexible with your schedule.
+
+
+            </div>
+            <div class="col-12" style="text-align: center;">
+              <button type="button" class="btn btn-primary" style="    padding: 10px 60px;
+              border-radius: 25px;">Watch Now</button>
+
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="card" style="padding: 48px;">
+            <img src="https://assets-global.website-files.com/621f6320a4c8a1030a6a2d65/62ecea231d8c6b763d315491_streamlinehq-astronomy-rocket-1-school-science-48.webp" alt="" srcset="" style="height: 50px;
+            width: 50px;
+            align-self: center;">
+            <div class="card-title" style="    margin-top: 10px;
+            margin-bottom: 0;
+            font-size: 24px;
+            color: #140855;
+            font-weight: 600;
+            line-height: 26px;
+            padding: 10px 0px;
+            text-align: center;
+            
+            ">
+Product Trial
+</div>
+            <div class="card-text" style="text-align: center; color: rgba(30,42,61,.7);">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique quos magni ea deserunt ducimus perspiciatis.
+            </div>
+            <div class="card-text" style="font-size: 12px;
+            font-weight: 500; padding: 15px 0px; text-align: center;">
+              Flexible with your schedule.
+
+
+            </div>
+            <div class="col-12" style="text-align: center;">
+              <button type="button" class="btn btn-primary" style="    padding: 10px 60px;
+              border-radius: 25px;">Try for Free</button>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+   </section>
+   <!-- Middle Section -->
+
+{% endblock body %}
